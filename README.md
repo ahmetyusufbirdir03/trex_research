@@ -102,7 +102,18 @@ Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşte
 | Microsoft.NETCore.App 6.0.16 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
 | Microsoft.NETCore.App 8.0.10 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
 | Microsoft.NETCore.App 8.0.13 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
-| Microsoft.NETCore.Ap
+| Microsoft.NETCore.App 8.0.18 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
+| Microsoft.NETCore.App 9.0.7 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
+| Microsoft.WindowsDesktop.App 8.0.10 | C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App |
+| Microsoft.WindowsDesktop.App 8.0.18 | C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App |
+| Microsoft.WindowsDesktop.App 9.0.7 | C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App |
+
+| **Other Architectures** | x86 [C:\Program Files (x86)\dotnet] |
+| **Environment Variables** | Not set |
+| **global.json** | Not found |
+| **Learn More** | [https://aka.ms/dotnet/info](https://aka.ms/dotnet/info) |
+| **Download .NET** | [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download) |
+
 
   
 
