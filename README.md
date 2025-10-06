@@ -66,52 +66,60 @@ Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşte
 
 ## "dotnet --info" Örneği ve İşlevi
 
-| Bölüm | Detay |
-|-------|-------|
-| **.NET SDK Version** | 9.0.302 |
-| **Commit** | bb2550b9af |
-| **Workload Version** | 9.0.300-manifests.183aaee6 |
-| **MSBuild Version** | 17.14.13+65391c53b |
+.NET SDK:
+ Version:           9.0.302
+ Commit:            bb2550b9af
+ Workload version:  9.0.300-manifests.183aaee6
+ MSBuild version:   17.14.13+65391c53b
 
-| **Çalışma Zamanı Ortamı** |  |
-| OS Name | Windows |
-| OS Version | 10.0.26100 |
-| OS Platform | Windows |
-| RID (Runtime Identifier) | win-x64 |
-| Base Path | C:\Program Files\dotnet\sdk\9.0.302\ |
+Çalışma Zamanı Ortamı:
+ OS Name:     Windows
+ OS Version:  10.0.26100
+ OS Platform: Windows
+ RID:         win-x64
+ Base Path:   C:\Program Files\dotnet\sdk\9.0.302\
 
-| **.NET İş Yükleri** | Görüntülenecek yüklü iş yükü yok. |
-| Yeni Bildirimler | loose manifests kullanılacak şekilde yapılandırıldı. |
+.NET iş yükleri yüklendi:
+Görüntülenecek yüklü iş yükü yok.
+Yeni bildirimler yüklenirken loose manifests kullanılacak şekilde yapılandırıldı.
 
-| **Host** |  |
-| Version | 9.0.7 |
-| Architecture | x64 |
-| Commit | 3c298d9f00 |
+Host:
+  Version:      9.0.7
+  Architecture: x64
+  Commit:       3c298d9f00
 
-| **Yüklü .NET SDK’lar** |  |
-| SDK Sürümü | Yükleme Yolu |
-| 8.0.403 | C:\Program Files\dotnet\sdk |
-| 9.0.302 | C:\Program Files\dotnet\sdk |
+.NET SDKs installed:
+  8.0.403 [C:\Program Files\dotnet\sdk]
+  9.0.302 [C:\Program Files\dotnet\sdk]
 
-| **Yüklü .NET Runtimes** |  |
-| Runtime | Yükleme Yolu |
-| Microsoft.AspNetCore.App 8.0.10 | C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App |
-| Microsoft.AspNetCore.App 8.0.18 | C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App |
-| Microsoft.AspNetCore.App 9.0.7 | C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App |
-| Microsoft.NETCore.App 6.0.16 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
-| Microsoft.NETCore.App 8.0.10 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
-| Microsoft.NETCore.App 8.0.13 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
-| Microsoft.NETCore.App 8.0.18 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
-| Microsoft.NETCore.App 9.0.7 | C:\Program Files\dotnet\shared\Microsoft.NETCore.App |
-| Microsoft.WindowsDesktop.App 8.0.10 | C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App |
-| Microsoft.WindowsDesktop.App 8.0.18 | C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App |
-| Microsoft.WindowsDesktop.App 9.0.7 | C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App |
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 8.0.10 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 8.0.18 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 9.0.7 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 6.0.16 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.10 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.13 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.18 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 9.0.7 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 8.0.10 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 8.0.18 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 9.0.7 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
 
-| **Other Architectures** | x86 [C:\Program Files (x86)\dotnet] |
-| **Environment Variables** | Not set |
-| **global.json** | Not found |
-| **Learn More** | [https://aka.ms/dotnet/info](https://aka.ms/dotnet/info) |
-| **Download .NET** | [https://aka.ms/dotnet/download](https://aka.ms/dotnet/download) |
+Other architectures found:
+  x86   [C:\Program Files (x86)\dotnet]
+    registered at [HKLM\SOFTWARE\dotnet\Setup\InstalledVersions\x86\InstallLocation]
+
+Environment variables:
+  Not set
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
 
 
   
