@@ -65,7 +65,7 @@ Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşte
 | **Durum**       | Artık güncellenmiyor      | Yerini .NET 7/8 aldı                   | En güncel sürümler          |
 
 ## "dotnet --info" Örneği ve İşlevi
-
+```yaml
 .NET SDK:
  Version:           9.0.302
  Commit:            bb2550b9af
@@ -120,6 +120,7 @@ Learn more:
 
 Download .NET:
   https://aka.ms/dotnet/download
+```
 
 
   
