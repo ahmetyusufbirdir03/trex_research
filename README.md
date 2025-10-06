@@ -580,4 +580,13 @@ Clean Architecture, bağımlılıkların ve sorumlulukların kontrol altında tu
   * Kullanıcı veya sistemle iletişimi sağlar (Controller, API, UI)
   * Application katmanındaki use-case’leri çağırır
 
+## Bağımlılıkların Dışa Akması İlkesi (Dependency Rule / Dependency Inversion) ##
+* İç katmanlar dış katmanlara bağımlı olamaz.
+* Dış katmanlar iç katmanlara bağımlıdır.
+* Interface’ler kullanılarak bağımlılıklar ters çevrilir:
+   >Örnek: IOrderRepository interface’i domain veya application katmanında tanımlanır, infrastructure katmanı bunu implement eder.
+* Bu sayede:
+    * Test edilebilirlik artar
+    * Teknoloji bağımlılığı azalır
+    * Kod değişiklikleri diğer katmanları etkilemez
 
