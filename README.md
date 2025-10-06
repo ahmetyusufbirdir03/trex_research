@@ -447,7 +447,12 @@ Middlware, bir programda istek(request) ve cevap(response) arasında yapılan ko
         │
         ▼
  ┌──────────────────────────────┐
- │ Middleware 3 (Routing)       │ → hangi Controller'a gideceğine karar verir
+ │ Middleware 4 (Authorization) │ → kullanıcının erişim yetkisini doğrular
+ └──────────────────────────────┘
+        │
+        ▼
+ ┌──────────────────────────────┐
+ │ Middleware 5 (Routing)       │ → hangi Controller'a gideceğine karar verir
  └──────────────────────────────┘
         │
         ▼
