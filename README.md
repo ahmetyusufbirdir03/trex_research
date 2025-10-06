@@ -154,6 +154,35 @@ Download .NET:
 2. **Asenkron (Asynchronous)**
     * İşlemler bağımsız olarak çalışır. Bir işlem beklerken diğer işlemler devam edebilir.
 
-  
+### Senkron İşlem
+```yaml
+public void SiparisVer(Siparis siparis)
+{
+    StokKontrolEt(siparis);           // 2 sn bekle
+    OdemeAl(siparis);                 // 3 sn bekle
+    FaturaOlustur(siparis);           // 1 sn bekle
+    KargoHazirla(siparis);            // 4 sn bekle
+    MusteriMailGonder(siparis);       // 2 sn bekle
+    
+    // TOPLAM: 12 saniye - Kullanıcı ekranda bekliyor! 
+}
+```
+### Asenkron İşlem
+```yaml
+public async Task SiparisVerAsync(Siparis siparis)
+{
+    await StokKontrolEtAsync(siparis);     // 2 sn
+    await OdemeAlAsync(siparis);            // 3 sn
+    
+    // Bu işlemler paralel çalışabilir
+    var faturaTask = FaturaOlusturAsync(siparis);
+    var kargoTask = KargoHazirlaAsync(siparis);
+    var mailTask = MusteriMailGonderAsync(siparis);
+    
+    await Task.WhenAll(faturaTask, kargoTask, mailTask);
+    
+    // TOPLAM: ~9 saniye - Kullanıcı daha az bekler! 
+}
+```
 
 
