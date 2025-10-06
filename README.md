@@ -187,3 +187,13 @@ public async Task SiparisVerAsync(Siparis siparis)
 
 # Backend Geliştirme Temelleri
 
+## HTTP Metotları ve Örnekleri
+
+1- ** GET **
+Sunucudan veri almak için kullanılır.
+Veriyi sadece okur, hiçbir şeyi değiştirmez.
+
+```bash
+GET https://api.example.com/users
+```
+
