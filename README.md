@@ -351,3 +351,17 @@ Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu de
  * Tamamen sıfırdan yazılmıştır.
  * ASP.NET Core, .NET Core veya .NET 5+ platformu üzerinde çalışır.
 
+### .NET vs .NET Core ###
+| Özellik                     | ASP.NET (.NET Framework)            | ASP.NET Core                                                |
+| --------------------------- | ----------------------------------- | ----------------------------------------------------------- |
+|  **Platform**             | Sadece Windows                      | Windows, Linux, macOS (Cross-platform)                        |
+|  **Performans**           | Daha yavaş, eski mimari             | Çok hızlı, optimize edilmiş Kestrel web server                |
+|  **Modülerlik**           | System.Web bağımlı (monolitik)      | Modüler, sadece gereken paketler yüklenir                     |
+|  **Web Server**           | IIS (Internet Information Services) | Kestrel (yerleşik), istenirse IIS/Nginx/Apache ile birlikte   |
+|  **Proje Yapısı**         | MVC, Web API ayrı projeler          | MVC + Web API + Razor Pages tek çatı altında                  |
+|  **Dependency Injection** | Harici kütüphane gerekir            | Yerleşik DI desteği                                           |
+|  **Açık Kaynak**          | Kapalı kaynak                       | Tamamen açık kaynak (GitHub’da)                               |
+|  **Bulut Uyumluluğu**     | Kısıtlı                             | Azure ve diğer cloud servislerle uyumlu                       |
+|  **Sürüm**                | .NET Framework 4.x                  | .NET 6, .NET 7, .NET 8 (en yeni sürümler)                     |
+
+
