@@ -124,24 +124,40 @@ Learn more:
 Download .NET:
   https://aka.ms/dotnet/download
 ```
-Bu komut, sistemde hangi .NET sürümlerinin yüklü olduğunu, hangi SDK ve runtime’ın aktif olduğunu gösterir.<br>
-1- .NET SDK (reflecting any global.json)<br>
-Bu bölüm, aktif SDK sürümünü ve commit bilgisini gösterir.<br>
-Version: Aktif .NET SDK sürümü (ör. 8.0.100)<br>
-Commit: SDK’nın kaynak kod commit ID’si<br>
-2- Runtime Environment<br>
-Çalıştığın işletim sistemi ve ortam bilgilerini verir:<br>
-OS Name / OS Version / OS Platform: İşletim sistemi bilgisi<br>
-RID (Runtime Identifier): Platform için benzersiz kimlik (örn. win10-x64)<br>
-Base Path: SDK’nın kurulu olduğu dizin<br>
-3- Host (useful for support)<br>
-.NET runtime’ın ana sürümü ve commit ID’si.<br>
-Hata veya destek durumlarında kullanılabilir.<br>
-4- .NET SDKs installed<br>
-Sistemde yüklü olan tüm SDK sürümleri.<br>
-Örnek: 7.0.203 ve 8.0.100<br>
-5- .NET runtimes installed<br>
-Sistemde yüklü tüm .NET çalışma zamanı (runtime) sürümleri.<br>
+1️⃣ .NET SDK (reflecting any global.json)
+
+Bu bölüm, aktif SDK sürümünü ve commit bilgisini gösterir.
+
+Version: Aktif .NET SDK sürümü (ör. 8.0.100)
+
+Commit: SDK’nın kaynak kod commit ID’si
+
+2️⃣ Runtime Environment
+
+Çalıştığın işletim sistemi ve ortam bilgilerini verir:
+
+OS Name / OS Version / OS Platform: İşletim sistemi bilgisi
+
+RID (Runtime Identifier): Platform için benzersiz kimlik (örn. win10-x64)
+
+Base Path: SDK’nın kurulu olduğu dizin
+
+3️⃣ Host (useful for support)
+
+.NET runtime’ın ana sürümü ve commit ID’si.
+
+Hata veya destek durumlarında kullanılabilir.
+
+4️⃣ .NET SDKs installed
+
+Sistemde yüklü olan tüm SDK sürümleri listelenir.
+
+Örnek: 7.0.203 ve 8.0.100
+
+5️⃣ .NET runtimes installed
+
+Sistemde yüklü tüm .NET çalışma zamanı (runtime) sürümleri listelenir.
+
 Örnek: Microsoft.NETCore.App 7.0.7 ve 8.0.0
 
 
