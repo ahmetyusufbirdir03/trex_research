@@ -453,10 +453,10 @@ Middleware, ASP.NET Core uygulamasında HTTP istekleri (request) ve yanıtları 
       Controller / Endpoint
         │
         ▼
- ┌──────────────────────────────┐
- │ Response geri döner          │
+ ┌──────────────────────────────────┐
+ │ Response geri döner              │
  │ (middleware’ler tersten çalışır) │
- └──────────────────────────────┘
+ └──────────────────────────────────┘
         │
         ▼
  HTTP Response (Kullanıcıya dönen cevap)
