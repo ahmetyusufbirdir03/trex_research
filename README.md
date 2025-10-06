@@ -5,14 +5,14 @@ Git: Bir kontrol sistemidir. Sistemin anlık görüntüsünü kaydeder ve deği�
 GitHub : Git ile yönetilen projeleri internet üzerinde depolamana ve paylaşmana yarayan bir platformdur.
 
 ## Temel Git Komutları
-init : Yeni bir proje başlatır.<br>
-clone : Başka bir projeyi kopyalar.<br>
-add : Yapılan değişiklikleri kalıcı hale getirmeden önce sıraya ekler.<br>
-commit : Yapılan değişiklikleri kalıcı hale getirir.<br>
-push : Kalıcı değişiklikleri GitHub projesine gönderir.<br>
-pull : GitHub'daki son değişiklikleri indirir ve yerel projeye ekler.<br>
-branch : Yeni bir dal(branch) oluşturur veya mevcut dalları listeler.<br>
-merge : Bir dalda yapılan değişiklikleri başka bir dal ile birleştirir.
+1- init : Yeni bir proje başlatır.<br>
+2- clone : Başka bir projeyi kopyalar.<br>
+3- add : Yapılan değişiklikleri kalıcı hale getirmeden önce sıraya ekler.<br>
+4- commit : Yapılan değişiklikleri kalıcı hale getirir.<br>
+5- push : Kalıcı değişiklikleri GitHub projesine gönderir.<br>
+6- pull : GitHub'daki son değişiklikleri indirir ve yerel projeye ekler.<br>
+7- branch : Yeni bir dal(branch) oluşturur veya mevcut dalları listeler.<br>
+8- merge : Bir dalda yapılan değişiklikleri başka bir dal ile birleştirir.
 
 ## CI/CD Nedir?
 CI/CD (Continuous Integration / Continuous Deployment), yazılım geliştirme sürecinde kodun otomatik olarak derlenmesini, test edilmesini ve dağıtılmasını sağlayan bir yaklaşımdır.<br>
