@@ -330,15 +330,15 @@ DELETE https://api.example.com/users/3
 ```
 Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu değerler sırasıyla status, message ve data değerleridir.<br>
 1. status
-   * Bu alan api isteiğinin durumunu belirtir. Burada başarılı(success) veya hata(error) gibi değerler olabilmektedir.
+  * Bu alan api isteiğinin durumunu belirtir. Burada başarılı(success) veya hata(error) gibi değerler olabilmektedir.
 2. message
-   * Bu kısım insan okuyucu içindir.
-   * Çoğu zaman geliştiriciye bazen de kullanıcıya geri bildirim vermek için kullanılır.
-   * Hatanın sebebini veya işlem sonucunu anlatır. 
+  * Bu kısım insan okuyucu içindir.
+  * Çoğu zaman geliştiriciye bazen de kullanıcıya geri bildirim vermek için kullanılır.
+  * Hatanın sebebini veya işlem sonucunu anlatır. 
 3. data
-   * Bu kısım asıl veriyi içerir.
-   * data genellikle bir nesne (object) ya da bazen dizi (array) olur.
-   * Burada API bize oluşturulan kullanıcı nesnesini döndürüyor.
+  * Bu kısım asıl veriyi içerir.
+  * data genellikle bir nesne (object) ya da bazen dizi (array) olur.
+  * Burada API bize oluşturulan kullanıcı nesnesini döndürüyor.
 
 # ASP.NET
 ### ASP.NET Nedir? ###
