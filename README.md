@@ -364,4 +364,43 @@ Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu de
 |  **Bulut Uyumluluğu**     | Kısıtlı                             | Azure ve diğer cloud servislerle uyumlu                       |
 |  **Sürüm**                | .NET Framework 4.x                  | .NET 6, .NET 7, .NET 8 (en yeni sürümler)                     |
 
+## MVC Nedir? ##
+MVC, yazılım geliştirmede kullanılan bir mimari tasarım desenidir. Uygulamanın farklı sorumluluklarını üç ana bileşene ayırarak kod organizasyonunu ve bakımını kolaylaştırır.
+### 1- Model (M) ###
+Ne işe yarar? Uygulamanın veri ve iş mantığını yönetir.
 
+### View (V) ###
+Ne işe yarar? Kullanıcıya gösterilen arayüzü oluşturur.
+
+### Controller (C) ###
+Ne işe yarar? Model ve View arasında köprü görevi görür.
+
+```yaml
+┌─────────────┐
+│  Kullanıcı  │
+│   (Browser) │
+└──────┬──────┘
+       │ 1. İstek gönderir
+       │    (örn: /Urun/Liste)
+       ▼
+┌──────────────────┐
+│   CONTROLLER     │ 2. İsteği karşılar
+│                  │ 3. Model'den veri ister
+└────┬─────────┬───┘
+     │         │
+     │ 4.      │ 6. Veriyi View'e gönderir
+     ▼         ▼
+┌─────────┐ ┌─────────┐
+│  MODEL  │ │  VIEW   │
+│         │ │         │
+│ Veri &  │ │ HTML    │
+│ İş      │ │ Oluştur │
+│ Mantığı │ │         │
+└─────────┘ └────┬────┘
+                 │ 7. HTML döner
+                 ▼
+          ┌─────────────┐
+          │  Kullanıcı  │
+          │   (Browser) │
+          └─────────────┘
+```
