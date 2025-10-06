@@ -477,13 +477,13 @@ Bağımlılık iki parçanın birbirine doğrudan bağlanmasıyla ve bu bağlanm
 
 Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara bölerek tasarlama yaklaşımıdır. Amaç, kodun okunabilirliğini, sürdürülebilirliğini ve test edilebilirliğini artırmaktır.
 1. Presentation Layer (Sunum Katmanı) 
-* Kullanıcıyla iletişim kuran katmandır.
-   * Örnek: Web uygulamalarında MVC’de Controller ve View, veya API’de Controller.
-* Görevleri:
-   * Kullanıcıdan gelen verileri almak
-   * İş katmanına iletmek
-   * İş katmanından gelen sonucu kullanıcıya göstermek
-   * Hiçbir iş kuralı burada olmamalıdır.
+   * Kullanıcıyla iletişim kuran katmandır.
+     > Örnek: Web uygulamalarında MVC’de Controller ve View, veya API’de Controller.
+   * Görevleri:
+      > Kullanıcıdan gelen verileri almak
+      > İş katmanına iletmek
+      > İş katmanından gelen sonucu kullanıcıya göstermek
+      > Hiçbir iş kuralı burada olmamalıdır.
 
 2. Business Layer (İş Katmanı / Service Layer) 
 * Sistemin iş kurallarının uygulandığı katmandır.
@@ -496,7 +496,7 @@ Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara b
    * Veri katmanı ile sunum katmanı arasında köprü görevi görmek
 
 3. Data Access Layer (Veri Erişim Katmanı / Repository Layer) 
-* Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.<>
+* Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.
    * Örnek: Entity Framework, Dapper, SQL sorguları.
 * Bu katman genellikle Repository pattern ile kullanılır.
 * Repository, veri kaynağı ile iş katmanı arasındaki soyutlamadır.
