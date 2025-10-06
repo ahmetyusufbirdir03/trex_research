@@ -376,7 +376,7 @@ Ne işe yarar? Kullanıcıya gösterilen arayüzü oluşturur.
 Ne işe yarar? Model ve View arasında köprü görevi görür.
 
 ```yaml
-         🔹 Kullanıcı (Tarayıcı)
+          Kullanıcı (Tarayıcı)
                  │
                  │ 1️- HTTP isteği gönderir (örneğin: /User/Details/1)
                  ▼
@@ -409,7 +409,7 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
                  │
                  │ 6️- Kullanıcıya sayfa olarak döner
                  ▼
-         🔹 Kullanıcı (Tarayıcı)
+          Kullanıcı (Tarayıcı)
 
 ```
 
@@ -433,7 +433,7 @@ Middlware, bir programda istek(request) ve cevap(response) arasında yapılan ko
  * Başka bir örnek olarak; hata kontrolü yapılmadan önce diğer kontroller yapılırsa hata uygulama çöker.
 
 ```yaml
-🔹 HTTP Request (Kullanıcıdan gelen istek)
+ HTTP Request (Kullanıcıdan gelen istek)
         │
         ▼
  ┌──────────────────────────────┐
@@ -468,4 +468,8 @@ Middlware, bir programda istek(request) ve cevap(response) arasında yapılan ko
  HTTP Response (Kullanıcıya dönen cevap)
 
 ```
+## Bağımlılık Enjeksiyonu(Dependency Injection) Nedir?
+Bağımlılık iki parçanın birbirine doğrudan bağlanmasıyla ve bu bağlanmanın sonucunda bir parçadaki değişimin diğer parçayı etkilemesiyle oluşur. Bağımlılık enjeksiyonu, birbiriyle bağımlılık oluşturan parçaların birbirinden ayrılarak dolaylı yollardan birbirleriyle haberleştirilmesidir. Örmnek olarak;
+   * Birbirinden farklı 3 sınıf A,B,C olsun. İlk durumda A sınıfında herhangi bir noktada B sınıfının bir nesnesi çağırılırsa bu durumda A sınıfı B sınıfına bağımlı olur. Bunun sebebi şudur: eğer A sınıfının ihtiyacının B yerine C olması halinde kaynak kodda değişim yapılması gerekir.
+   * Ancak A sınıfı doğrudan B veya C sınıflarını kullanmak yerine B ve C sınıflarının çağıracak farklı bir çağırıcı kullanır ise, B veya C sınıflarından birine ihtiyacı değişirse veya B ve C sınıflarının yapıları değişirse, Asınıfında değişiklik yapılmak durumunda kalınmayacağından bağımlılık azaltılmış, enjekte edilmiş olur.
 
