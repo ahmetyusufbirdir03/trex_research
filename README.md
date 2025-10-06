@@ -285,5 +285,18 @@ DELETE https://api.example.com/users/3
     * İşlemler için HTTP metodları (GET, POST, PUT, DELETE...) kullanılır.
     * Veriler genellikle JSON formatında döner.
     * “Stateless” (durumsuz) bir mimaridir — her istek bağımsızdır.
-   
+      
+2. SOAP (Simple Object Access Protocol)
+    * XML tabanlı iletişim protokolüdür.
+    * REST’e göre daha katı ve standartlaştırılmıştır.
+    * HTTP dışında da (örneğin SMTP, TCP) çalışabilir.
+    * Güvenlik, kimlik doğrulama, hata yönetimi gibi konular için WS- standartlarını* kullanır.
+    * Genelde kurumsal sistemlerde (bankacılık, sigorta, ERP) tercih edilir.
+      
+3. GraphQL
+    * Facebook tarafından geliştirildi (2015).
+    * İstemci (client), tam olarak hangi alanları istediğini söyler.
+    * Tek bir endpoint üzerinden çalışır (örn. /graphql).
+    * Veri formatı: JSON
+    * Gereksiz veri transferini önler (REST’e göre daha optimize).
 
