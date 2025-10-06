@@ -477,35 +477,35 @@ Bağımlılık iki parçanın birbirine doğrudan bağlanmasıyla ve bu bağlanm
 
 Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara bölerek tasarlama yaklaşımıdır. Amaç, kodun okunabilirliğini, sürdürülebilirliğini ve test edilebilirliğini artırmaktır.
 ### Presentation Layer (Sunum Katmanı) ###
-Kullanıcıyla iletişim kuran katmandır.
-Örnek: Web uygulamalarında MVC’de Controller ve View, veya API’de Controller.
-Görevleri:
-Kullanıcıdan gelen verileri almak
-İş katmanına iletmek
-İş katmanından gelen sonucu kullanıcıya göstermek
-Hiçbir iş kuralı burada olmamalıdır.
+* Kullanıcıyla iletişim kuran katmandır.
+   * Örnek: Web uygulamalarında MVC’de Controller ve View, veya API’de Controller.
+* Görevleri:
+   * Kullanıcıdan gelen verileri almak
+   * İş katmanına iletmek
+   * İş katmanından gelen sonucu kullanıcıya göstermek
+   * Hiçbir iş kuralı burada olmamalıdır.
 
 ### Business Layer (İş Katmanı / Service Layer) ###
-Sistemin iş kurallarının uygulandığı katmandır.
-Örnek: Bir e-ticaret sisteminde sipariş oluşturma, stok kontrolü.
-Bu katmanda genellikle Service sınıfları bulunur.
-Örn: OrderService, PaymentService
-Görevleri:
-İş mantığını uygulamak
-Veri doğrulama
-Veri katmanı ile sunum katmanı arasında köprü görevi görmek
+* Sistemin iş kurallarının uygulandığı katmandır.
+   * Örnek: Bir e-ticaret sisteminde sipariş oluşturma, stok kontrolü.
+* Bu katmanda genellikle Service sınıfları bulunur.
+   * Örn: OrderService, PaymentService
+* Görevleri:
+   * İş mantığını uygulamak
+   * Veri doğrulama
+   * Veri katmanı ile sunum katmanı arasında köprü görevi görmek
 
 ### Data Access Layer (Veri Erişim Katmanı / Repository Layer) ###
-Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.
-Örnek: Entity Framework, Dapper, SQL sorguları.
-Bu katman genellikle Repository pattern ile kullanılır.
-Repository, veri kaynağı ile iş katmanı arasındaki soyutlamadır.
-Örn: OrderRepository sınıfı veritabanından siparişleri alır veya ekler.
+* Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.<>
+   * Örnek: Entity Framework, Dapper, SQL sorguları.
+* Bu katman genellikle Repository pattern ile kullanılır.
+* Repository, veri kaynağı ile iş katmanı arasındaki soyutlamadır.
+   * Örn: OrderRepository sınıfı veritabanından siparişleri alır veya ekler.
 
 ## Service & Repository Pattern ##
 * Service Pattern: İş katmanındaki sınıfların belirli bir iş sürecini yönetmesini sağlar.
 * Repository Pattern: Veri erişimi soyutlar. İş katmanı, veri kaynağına doğrudan bağımlı olmaz.
-Örnek akış:
+* Örnek akış:
   * Kullanıcı bir sipariş ekler (Presentation Layer → Controller)
   * Controller → OrderService çağırır
   * OrderService → OrderRepository kullanarak veriyi kaydeder
