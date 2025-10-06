@@ -506,10 +506,56 @@ Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara b
 * Service Pattern: İş katmanındaki sınıfların belirli bir iş sürecini yönetmesini sağlar.
 * Repository Pattern: Veri erişimi soyutlar. İş katmanı, veri kaynağına doğrudan bağımlı olmaz.
   * Örnek akış:
-    1. Kullanıcı bir sipariş ekler (Presentation Layer → Controller)
-    2. Controller → OrderService çağırır
-    3. OrderService → OrderRepository kullanarak veriyi kaydeder
-    4. Repository veriyi veritabanına ekler
-    5. Sonuç service üzerinden controller’a iletilir
-    6. Controller sonucu kullanıcıya döndürür
-
+ ```yaml
++--------------------------+
+|  KULLANICI (Uygulama)    |  
++--------------------------+
+             |
+             | 1. Sipariş Ekle
+             v
++---------------------------------+
+|  Presentation Layer(Controller) |
++---------------------------------+
+             |
+             | 2. OrderService Çağır
+             v
++-------------------------------+
+|  Business Layer(OrderService) |
++-------------------------------+
+             |
+             | 3. OrderRepository Çağır & Veri İste
+             v
++-------------------------------------+
+|  Data Access Layer(OrderRepository) |
++-------------------------------------+
+             |
+             | 4. Veriyi Kaydet (SQL/NoSQL)
+             v
++--------------------------+
+|       Veritabanı         |
++--------------------------+
+             |
+             | 5. Kayıt Başarısı Sonucunu Dön
+             v
++-------------------------------------+
+|  Data Access Layer(OrderRepository) |
++-------------------------------------+
+             |
+             | 5. Sonucu Service'e İlet
+             v
++--------------------------------+
+|  Business Layer (OrderService) |
++--------------------------------+
+             |
+             | 5. Sonucu Controller'a İlet
+             v
++---------------------------------+
+|  Presentation Layer(Controller) |
++---------------------------------+
+             |
+             | 6. Sonucu Kullanıcıya Dön
+             v
++--------------------------+
+|  KULLANICI (Uygulama)    |
++--------------------------+
+```
