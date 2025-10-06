@@ -426,3 +426,40 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
    * Kodlar izole halde olduğundan test eilebilirlik kolaylaşır
 5. Yeniden Kullanılabilirlik
    * Aynı model farklı view'lerde kullanılabilir
+
+## Middleware Nedir?
+Middleware, bir HTTP isteği ve yanıtı arasında çalışan ara katman yazılım bileşenleridir. İstek sunucuya ulaşmadan önce ve yanıt kullanıcıya dönmeden önce işlemler yapar.
+Middleware, ASP.NET Core uygulamasında HTTP istekleri (request) ve yanıtları (response) arasında ardışık olarak çalışan yazılım bileşenleridir. Yani her isteğin geçtiği bir işlem hattı (pipeline) oluştururlar.
+
+```yaml
+🔹 HTTP Request (Kullanıcıdan gelen istek)
+        │
+        ▼
+ ┌──────────────────────────────┐
+ │ Middleware 1 (Logging)       │ → isteği loglar
+ └──────────────────────────────┘
+        │
+        ▼
+ ┌──────────────────────────────┐
+ │ Middleware 2 (Authentication)│ → kullanıcıyı doğrular
+ └──────────────────────────────┘
+        │
+        ▼
+ ┌──────────────────────────────┐
+ │ Middleware 3 (Routing)       │ → hangi Controller'a gideceğine karar verir
+ └──────────────────────────────┘
+        │
+        ▼
+      Controller / Endpoint
+        │
+        ▼
+ ┌──────────────────────────────┐
+ │ Response geri döner          │
+ │ (middleware’ler tersten çalışır) │
+ └──────────────────────────────┘
+        │
+        ▼
+ HTTP Response (Kullanıcıya dönen cevap)
+
+```
+
