@@ -506,10 +506,10 @@ Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara b
 * Service Pattern: İş katmanındaki sınıfların belirli bir iş sürecini yönetmesini sağlar.
 * Repository Pattern: Veri erişimi soyutlar. İş katmanı, veri kaynağına doğrudan bağımlı olmaz.
   * Örnek akış:
-     >Kullanıcı bir sipariş ekler (Presentation Layer → Controller)
-     > Controller → OrderService çağırır
-     > OrderService → OrderRepository kullanarak veriyi kaydeder
-     > Repository veriyi veritabanına ekler
-     > Sonuç service üzerinden controller’a iletilir
-     > Controller sonucu kullanıcıya döndürür
+     1. Kullanıcı bir sipariş ekler (Presentation Layer → Controller)
+     2. Controller → OrderService çağırır
+     3. OrderService → OrderRepository kullanarak veriyi kaydeder
+     4. Repository veriyi veritabanına ekler
+     5. Sonuç service üzerinden controller’a iletilir
+     6. Controller sonucu kullanıcıya döndürür
 
