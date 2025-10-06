@@ -486,21 +486,21 @@ Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara b
       > Hiçbir iş kuralı burada olmamalıdır.
 
 2. Business Layer (İş Katmanı / Service Layer) 
-* Sistemin iş kurallarının uygulandığı katmandır.
-   * Örnek: Bir e-ticaret sisteminde sipariş oluşturma, stok kontrolü.
-* Bu katmanda genellikle Service sınıfları bulunur.
-   * Örn: OrderService, PaymentService
-* Görevleri:
-   * İş mantığını uygulamak
-   * Veri doğrulama
-   * Veri katmanı ile sunum katmanı arasında köprü görevi görmek
+   * Sistemin iş kurallarının uygulandığı katmandır.
+      > Örnek: Bir e-ticaret sisteminde sipariş oluşturma, stok kontrolü.
+   * Bu katmanda genellikle Service sınıfları bulunur.
+      > Örn: OrderService, PaymentService
+   * Görevleri:
+      > İş mantığını uygulamak
+      > Veri doğrulama
+      > Veri katmanı ile sunum katmanı arasında köprü görevi görmek
 
 3. Data Access Layer (Veri Erişim Katmanı / Repository Layer) 
-* Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.
-   * Örnek: Entity Framework, Dapper, SQL sorguları.
-* Bu katman genellikle Repository pattern ile kullanılır.
-* Repository, veri kaynağı ile iş katmanı arasındaki soyutlamadır.
-   * Örn: OrderRepository sınıfı veritabanından siparişleri alır veya ekler.
+   * Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.
+      > Örnek: Entity Framework, Dapper, SQL sorguları.
+   * Bu katman genellikle Repository pattern ile kullanılır.
+   * Repository, veri kaynağı ile iş katmanı arasındaki soyutlamadır.
+      > Örn: OrderRepository sınıfı veritabanından siparişleri alır veya ekler.
 
 ## Service & Repository Pattern ##
 * Service Pattern: İş katmanındaki sınıfların belirli bir iş sürecini yönetmesini sağlar.
