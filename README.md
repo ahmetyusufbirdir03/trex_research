@@ -589,4 +589,14 @@ Clean Architecture, bağımlılıkların ve sorumlulukların kontrol altında tu
     * Test edilebilirlik artar
     * Teknoloji bağımlılığı azalır
     * Kod değişiklikleri diğer katmanları etkilemez
+ 
+## Katmanlı Mimari vs Clean Architecture ##
+| Özellik / Mimari   | Katmanlı Mimarî                                             | Clean Architecture                                              |
+| ------------------ | ----------------------------------------------------------- | --------------------------------------------------------------- |
+| Katmanlar          | Presentation, Business, Data Access                         | Domain, Application, Infrastructure, API                        |
+| Bağımlılık Yönü    | Genellikle yukarıdan aşağı (Presentation → Business → Data) | İç katmanlar bağımlı değil, dış katmanlar iç katmanlara bağımlı |
+| Soyutlama          | Service & Repository                                        | Interface + Dependency Inversion                                |
+| Test Edilebilirlik | Orta                                                        | Yüksek                                                          |
+| Esneklik           | Orta                                                        | Yüksek (teknoloji bağımsız)                                     |
+
 
