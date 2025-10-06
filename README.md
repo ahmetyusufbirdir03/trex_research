@@ -414,7 +414,7 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
 ```
 
 ## MVC mimarisi Kullanım Amaçları ##
-1. Separation of Concerns (Kaygıların Ayrılması)
+1. Kaygıların Ayrılması(Separation of Concerns)
    * Her katman kendi işine odaklanır, İşler karışmaz.
 2. Bakım Kolaylığı
    * Kodlar anlaşılır
