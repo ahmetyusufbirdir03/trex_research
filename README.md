@@ -330,7 +330,7 @@ DELETE https://api.example.com/users/3
 ```
 Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu değerler sırasıyla status, message ve data değerleridir.<br>
 1. status
-   * Bu alan api isteiğinin durumunu belirtir. Burada başarılı(success) veya hata(error) gibi değerler olabilmektedir.
+Bu alan api isteiğinin durumunu belirtir. Burada başarılı(success) veya hata(error) gibi değerler olabilmektedir.
 2. message
   * Bu kısım insan okuyucu içindir.
   * Çoğu zaman geliştiriciye bazen de kullanıcıya geri bildirim vermek için kullanılır.
