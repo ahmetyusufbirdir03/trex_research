@@ -65,7 +65,6 @@ Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşte
 | **Durum**       | Artık güncellenmiyor      | Yerini .NET 7/8 aldı                   | En güncel sürümler          |
 
 ## "dotnet --info" Örneği ve İşlevi
-## .NET Bilgi Çıktısı (`dotnet --info`)
 
 | Bölüm | Detay |
 |-------|-------|
