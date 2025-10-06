@@ -164,7 +164,7 @@ public void SiparisVer(Siparis siparis)
     KargoHazirla(siparis);            // 4 sn bekle
     MusteriMailGonder(siparis);       // 2 sn bekle
     
-    // TOPLAM: 12 saniye - Kullanıcı ekranda bekliyor! 
+    // TOPLAM 12 saniye - Kullanıcı ekranda bekliyor! 
 }
 ```
 ### Asenkron İşlem
@@ -181,7 +181,7 @@ public async Task SiparisVerAsync(Siparis siparis)
     
     await Task.WhenAll(faturaTask, kargoTask, mailTask);
     
-    // TOPLAM: ~9 saniye - Kullanıcı daha az bekler! 
+    // TOPLAM ~9 saniye - Kullanıcı daha az bekler! 
 }
 ```
 
