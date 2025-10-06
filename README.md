@@ -300,3 +300,18 @@ DELETE https://api.example.com/users/3
     * Veri formatı: JSON
     * Gereksiz veri transferini önler (REST’e göre daha optimize).
 
+### Karşılaştırma ###
+| Özellik                 | **REST**                      | **SOAP**                 | **GraphQL**                  |
+| ----------------------- | ----------------------------- | ------------------------ | ---------------------------- |
+| **Veri Formatı**        | JSON, XML                     | XML                      | JSON                         |
+| **Çalışma Prensibi**    | HTTP üzerinden kaynak tabanlı | XML tabanlı protokol     | Tek endpoint, sorgu tabanlı  |
+| **Performans**          | Hızlı                         | Ağır / yavaş             | Çok hızlı (isteğe göre veri) |
+| **Karmaşıklık**         | Basit                         | Karmaşık                 | Orta                         |
+| **Güvenlik**            | HTTPS ile sağlanır            | WS-Security standartları | HTTPS ile sağlanır           |
+| **Kullanım Alanı**      | Web & mobil API’ler           | Kurumsal sistemler       | Modern, dinamik frontend’ler |
+| **Endpoint Sayısı**     | Her kaynak için farklı        | Tek endpoint             | Tek endpoint                 |
+| **Örnek Cevap Formatı** | JSON                          | XML                      | JSON                         |
+| **Kullanım Kolaylığı**  | Çok kolay                     | Zor                      | Orta                         |
+| **Standartlaştırma**    | Esnek                         | Yüksek düzeyde standart  | Esnek                        |
+
+
