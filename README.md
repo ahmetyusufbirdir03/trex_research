@@ -340,3 +340,14 @@ Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu de
    * data genellikle bir nesne (object) ya da bazen dizi (array) olur.
    * Burada API bize oluşturulan kullanıcı nesnesini döndürüyor.
 
+# ASP.NET
+### ASP.NET Nedir? ###
+ * ASP.NET, Microsoft tarafından geliştirilmiş bir web uygulama geliştirme framework’üdür.
+ * İlk olarak 2002 yılında çıktı ve .NET Framework üzerinde çalışır.
+ * Yani sadece Windows işletim sisteminde çalışır. 
+
+### ASP.NET Core Nedir? ### 
+ * ASP.NET Core, Microsoft’un 2016’da yayınladığı yenilenmiş ve açık kaynaklı (open-source) sürümüdür.
+ * Tamamen sıfırdan yazılmıştır.
+ * ASP.NET Core, .NET Core veya .NET 5+ platformu üzerinde çalışır.
+
