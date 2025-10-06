@@ -122,6 +122,32 @@ Download .NET:
   https://aka.ms/dotnet/download
 ```
 
+.NET Geliştirme Ortamı
+🔧 SDK Bilgileri
+ÖzellikDeğerVersiyon9.0.302Commitbb2550b9afWorkload Version9.0.300-manifests.183aaee6MSBuild Version17.14.13+65391c53b
+💻 Çalışma Zamanı Ortamı
+ÖzellikDeğerİşletim SistemiWindows 10.0.26100PlatformWindows (x64)RIDwin-x64Base PathC:\Program Files\dotnet\sdk\9.0.302\
+🏠 Host Bilgileri
+ÖzellikDeğerVersion9.0.7Architecturex64Commit3c298d9f00
+📦 Yüklü SDK'lar
+.NET 8.0.403
+.NET 9.0.302
+🚀 Yüklü Runtime'lar
+Microsoft.AspNetCore.App
+8.0.10
+8.0.18
+9.0.7
+Microsoft.NETCore.App
+6.0.16
+8.0.10
+8.0.13
+8.0.18
+9.0.7
+Microsoft.WindowsDesktop.App
+8.0.10
+8.0.18
+9.0.7
+
 
   
 
