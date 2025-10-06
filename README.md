@@ -50,3 +50,22 @@ Dağıtım aşamasında, ürünün son kopyası kullanıcıya verirlir. Bu kopya
 6- Bakım <br>
 Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşteri sorunları çözülür ve yazılım değişiklikleri yönetilir. Ek olarak, mevcut yazılımı iyileştirmenin yeni yollarını belirlemek için genel sistem performansını, güvenliğini ve kullanıcı deneyimini de izlenir.
 
+# .NET Ekosistemi
+
+## .NET Nedir? Neden Kullanılır?
+.NET, Microsoft tarafından geliştirilen bir uygulama geliştirme platformudur. C#, VB.NET ve F# gibi dillerle masaüstü, web, mobil, oyun ve bulut uygulamaları geliştirmeyi sağlar.<br>
+
+2002: İlk sürüm olan .NET Framework yayınlandı (Windows odaklıydı).
+2016: Microsoft, açık kaynaklı ve platformlar arası çalışan .NET Core’u tanıttı.
+2020 ve sonrası: Tüm sürümler birleşerek .NET 5, .NET 6, .NET 7, .NET 8 olarak devam etti.
+
+| Özellik         | .NET Framework            | .NET Core                              | .NET 7/8+                   |
+| --------------- | ------------------------- | -------------------------------------- | --------------------------- |
+| **Yıl**         | 2002                      | 2016                                   | 2022–2024                   |
+| **Platform**    | Sadece Windows            | Cross-platform (Windows, Linux, macOS) | Tek birleşik .NET platformu |
+| **Açık Kaynak** | ❌ Hayır                  | ✅ Evet                               | ✅ Evet                     |
+| **Performans**  | Orta                      | Yüksek                                 | Çok yüksek                  |
+| **Kapsam**      | Eski Windows uygulamaları | Web, API, microservice                 | Web, API, mobil, bulut, IoT |
+| **Durum**       | Artık güncellenmiyor      | Yerini .NET 7/8 aldı                   | En güncel sürümler          |
+
+
