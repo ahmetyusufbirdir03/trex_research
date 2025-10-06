@@ -1,4 +1,4 @@
-# Modern Yazılım Geliştirme Pratikleri
+# 1- Modern Yazılım Geliştirme Pratikleri
 
 ## Git Nedir? GitHub Nedir?
 Git: Bir kontrol sistemidir. Sistemin anlık görüntüsünü kaydeder ve değişiklik durumunda eski haline referans verir.<br>
@@ -50,7 +50,7 @@ Dağıtım aşamasında, ürünün son kopyası kullanıcıya verirlir. Bu kopya
 6- Bakım <br>
 Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşteri sorunları çözülür ve yazılım değişiklikleri yönetilir. Ek olarak, mevcut yazılımı iyileştirmenin yeni yollarını belirlemek için genel sistem performansını, güvenliğini ve kullanıcı deneyimini de izlenir.
 
-# .NET Ekosistemi
+# 2- .NET Ekosistemi
 
 ## .NET Nedir? Neden Kullanılır?
 .NET, Microsoft tarafından geliştirilen bir uygulama geliştirme platformudur. C#, VB.NET ve F# gibi dillerle masaüstü, web, mobil, oyun ve bulut uygulamaları geliştirmeyi sağlar.<br>
@@ -185,7 +185,7 @@ public async Task SiparisVerAsync(Siparis siparis)
 }
 ```
 
-# Backend Geliştirme Temelleri
+# 3- Backend Geliştirme Temelleri
 
 ## HTTP Metotları ve Örnekleri
 
@@ -340,7 +340,7 @@ Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu de
   * data genellikle bir nesne (object) ya da bazen dizi (array) olur.
   * Burada API bize oluşturulan kullanıcı nesnesini döndürüyor.
 
-# ASP.NET
+# 4- ASP.NET
 ### ASP.NET Nedir? ###
  * ASP.NET, Microsoft tarafından geliştirilmiş bir web uygulama geliştirme framework’üdür.
  * İlk olarak 2002 yılında çıktı ve .NET Framework üzerinde çalışır.
@@ -472,4 +472,44 @@ Middlware, bir programda istek(request) ve cevap(response) arasında yapılan ko
 Bağımlılık iki parçanın birbirine doğrudan bağlanmasıyla ve bu bağlanmanın sonucunda bir parçadaki değişimin diğer parçayı etkilemesiyle oluşur. Bağımlılık enjeksiyonu, birbiriyle bağımlılık oluşturan parçaların birbirinden ayrılarak dolaylı yollardan birbirleriyle haberleştirilmesidir. Örnek olarak;
    * Birbirinden farklı 3 sınıf A,B,C olsun. İlk durumda A sınıfında herhangi bir noktada B sınıfının bir nesnesi çağırılırsa bu durumda A sınıfı B sınıfına bağımlı olur. Bunun sebebi şudur: eğer A sınıfının ihtiyacının B yerine C olması halinde kaynak kodda değişim yapılması gerekir.
    * Ancak A sınıfı doğrudan B veya C sınıflarını kullanmak yerine B ve C sınıflarının çağıracak farklı bir çağırıcı kullanır ise, B veya C sınıflarından birine ihtiyacı değişirse veya B ve C sınıflarının yapıları değişirse, Asınıfında değişiklik yapılmak durumunda kalınmayacağından bağımlılık azaltılmış, enjekte edilmiş olur.
+
+## Katmanlı Mimari ##
+
+Katmanlı mimari, yazılım sistemlerini ayrı sorumluluklara sahip katmanlara bölerek tasarlama yaklaşımıdır. Amaç, kodun okunabilirliğini, sürdürülebilirliğini ve test edilebilirliğini artırmaktır.
+### Presentation Layer (Sunum Katmanı) ###
+Kullanıcıyla iletişim kuran katmandır.
+Örnek: Web uygulamalarında MVC’de Controller ve View, veya API’de Controller.
+Görevleri:
+Kullanıcıdan gelen verileri almak
+İş katmanına iletmek
+İş katmanından gelen sonucu kullanıcıya göstermek
+Hiçbir iş kuralı burada olmamalıdır.
+
+### Business Layer (İş Katmanı / Service Layer) ###
+Sistemin iş kurallarının uygulandığı katmandır.
+Örnek: Bir e-ticaret sisteminde sipariş oluşturma, stok kontrolü.
+Bu katmanda genellikle Service sınıfları bulunur.
+Örn: OrderService, PaymentService
+Görevleri:
+İş mantığını uygulamak
+Veri doğrulama
+Veri katmanı ile sunum katmanı arasında köprü görevi görmek
+
+### Data Access Layer (Veri Erişim Katmanı / Repository Layer) ###
+Veritabanı veya başka veri kaynaklarına erişim sağlamak için kullanılır.
+Örnek: Entity Framework, Dapper, SQL sorguları.
+Bu katman genellikle Repository pattern ile kullanılır.
+Repository, veri kaynağı ile iş katmanı arasındaki soyutlamadır.
+Örn: OrderRepository sınıfı veritabanından siparişleri alır veya ekler.
+
+## Service & Repository Pattern ##
+* Service Pattern: İş katmanındaki sınıfların belirli bir iş sürecini yönetmesini sağlar.
+* Repository Pattern: Veri erişimi soyutlar. İş katmanı, veri kaynağına doğrudan bağımlı olmaz.
+Örnek akış:
+  * Kullanıcı bir sipariş ekler (Presentation Layer → Controller)
+  * Controller → OrderService çağırır
+  * OrderService → OrderRepository kullanarak veriyi kaydeder
+  * Repository veriyi veritabanına ekler
+  * Sonuç service üzerinden controller’a iletilir
+  * Controller sonucu kullanıcıya döndürür
 
