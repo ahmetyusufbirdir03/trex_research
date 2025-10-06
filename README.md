@@ -189,11 +189,91 @@ public async Task SiparisVerAsync(Siparis siparis)
 
 ## HTTP Metotları ve Örnekleri
 
-1. ** GET ** <br>
+1- GET  <br>
 Sunucudan veri almak için kullanılır.
 Veriyi sadece okur, hiçbir şeyi değiştirmez.
 
+### Request ###
 ```bash
 GET https://api.example.com/users
+```
+
+### Response ###
+```bash
+[
+  { "id": 1, "name": "Ahmet Yusuf" },
+  { "id": 2, "name": "Zeynep" }
+]
+
+```
+
+2- POST  <br>
+Sunucuya yeni veri göndermek / eklemek için kullanılır.
+Veri, isteğin gövdesinde (body) gönderilir.
+
+### Request ###
+```bash
+POST https://api.example.com/users
+Content-Type: application/json
+
+{
+  "name": "Mehmet",
+  "email": "mehmet@example.com"
+}
+```
+
+### Response ###
+```bash
+{
+  "id": 3,
+  "name": "Mehmet",
+  "email": "mehmet@example.com",
+  "message": "Kullanıcı başarıyla eklendi."
+}
+
+```
+
+3- PUT  <br>
+Var olan bir veriyi tamamen güncellemek için kullanılır.
+Gönderilen veri, eski kaydın yerini alır.
+
+### Request ###
+```bash
+PUT https://api.example.com/users/3
+Content-Type: application/json
+
+{
+  "name": "Mehmet Ali",
+  "email": "mehmetal@example.com"
+}
+
+```
+
+### Response ###
+```bash
+{
+  "id": 3,
+  "name": "Mehmet Ali",
+  "email": "mehmetal@example.com",
+  "message": "Kullanıcı bilgileri güncellendi."
+}
+
+```
+
+4- DELETE  <br>
+Sunucudaki belirli bir veriyi silmek için kullanılır.
+
+### Request ###
+```bash
+DELETE https://api.example.com/users/3
+
+```
+
+### Response ###
+```bash
+{
+  "message": "Kullanıcı (ID: 3) başarıyla silindi."
+}
+
 ```
 
