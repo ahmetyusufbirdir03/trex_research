@@ -381,7 +381,7 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
 │   (Browser) │
 └──────┬──────┘
        │ 1. İstek gönderir
-       │    (örn: /Urun/Liste)
+       │    (orn -> /Urun/Liste)
        ▼
 ┌──────────────────┐
 │   CONTROLLER     │ 2. İsteği karşılar
