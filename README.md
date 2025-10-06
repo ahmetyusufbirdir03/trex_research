@@ -55,10 +55,6 @@ Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşte
 ## .NET Nedir? Neden Kullanılır?
 .NET, Microsoft tarafından geliştirilen bir uygulama geliştirme platformudur. C#, VB.NET ve F# gibi dillerle masaüstü, web, mobil, oyun ve bulut uygulamaları geliştirmeyi sağlar.<br>
 
-2002: İlk sürüm olan .NET Framework yayınlandı (Windows odaklıydı).
-2016: Microsoft, açık kaynaklı ve platformlar arası çalışan .NET Core’u tanıttı.
-2020 ve sonrası: Tüm sürümler birleşerek .NET 5, .NET 6, .NET 7, .NET 8 olarak devam etti.
-
 | Özellik         | .NET Framework            | .NET Core                              | .NET 7/8+                   |
 | --------------- | ------------------------- | -------------------------------------- | --------------------------- |
 | **Yıl**         | 2002                      | 2016                                   | 2022–2024                   |
