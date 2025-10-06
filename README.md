@@ -418,6 +418,7 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
    > Her katman kendi işine odaklanır, İşler karışmaz.
 2. Bakım Kolaylığı
    >Kodlar anlaşılır
+   <br>
    >Hataları bulmak kolaydır
    >Kod parçaları birbirinden izoledir
 3. Takım Çalışması
