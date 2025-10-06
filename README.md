@@ -428,8 +428,9 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
    * Aynı model farklı view'lerde kullanılabilir
 
 ## Middleware Nedir?
-Middleware, bir HTTP isteği ve yanıtı arasında çalışan ara katman yazılım bileşenleridir. İstek sunucuya ulaşmadan önce ve yanıt kullanıcıya dönmeden önce işlemler yapar.
-Middleware, ASP.NET Core uygulamasında HTTP istekleri (request) ve yanıtları (response) arasında ardışık olarak çalışan yazılım bileşenleridir. Yani her isteğin geçtiği bir işlem hattı (pipeline) oluştururlar.
+Middlware, bir programda istek(request) ve cevap(response) arasında yapılan kontrol işlem birimleirdir. Burada giriş yetkisi, erişim yetkisi veya gereksinime özel yapılacak kontrol işlemleri yapılır ve en sonunda cevap oluşturulur. Cevap oluştuktan sonra her middleware tersten bir sıra ile çalışır. Middleware'lar belirli bir sıra ile çalışırlar. Bu sebeple middleware yapılarının program.cs veya startup.cs içerisindeki sıralaması önemlidir. Aksi durumda beklenmeyen hatalar oluşur. 
+ * Örneğin; giriş yetkisinden önce erişim yetkisi kontrol edilmesi durumunda sisteme giriş izni olmayan birinin erişimi yapılmış olur.
+ * Başka bir örnek olarak; hata kontrolü yapılmadan önce diğer kontroller yapılırsa hata uygulama çöker.
 
 ```yaml
 🔹 HTTP Request (Kullanıcıdan gelen istek)
