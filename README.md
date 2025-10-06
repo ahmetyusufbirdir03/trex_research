@@ -413,16 +413,16 @@ Ne işe yarar? Model ve View arasında köprü görevi görür.
 
 ```
 
-### MVC mimarisi Kullanım Amaçları ###
+## MVC mimarisi Kullanım Amaçları ##
 1. Separation of Concerns (Kaygıların Ayrılması)
-  * Her katman kendi işine odaklanır, İşler karışmaz.
+   * Her katman kendi işine odaklanır, İşler karışmaz.
 2. Bakım Kolaylığı
-  * Kodlar anlaşılır
-  * Hataları bulmak kolaydır
-  * Kod parçaları birbirinden izoledir
+   * Kodlar anlaşılır
+   * Hataları bulmak kolaydır
+   * Kod parçaları birbirinden izoledir
 3. Takım Çalışması
-  * Frontend developer view üzerinde çalışırken, backend developer model ve controller üzerinde çalışırlar ve birbirlerni engellemezler.
+   * Frontend developer view üzerinde çalışırken, backend developer model ve controller üzerinde çalışırlar ve birbirlerni engellemezler.
 4. Test Edilebilirlik
-  * Kodlar izole halde olduğundan test eilebilirlik kolaylaşır
+   * Kodlar izole halde olduğundan test eilebilirlik kolaylaşır
 5. Yeniden Kullanılabilirlik
-  * Aynı model farklı view'lerde kullanılabilir
+   * Aynı model farklı view'lerde kullanılabilir
