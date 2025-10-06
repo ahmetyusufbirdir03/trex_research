@@ -189,7 +189,7 @@ public async Task SiparisVerAsync(Siparis siparis)
 
 ## HTTP Metotları ve Örnekleri
 
-1- ** GET **
+1- ** GET ** <br>
 Sunucudan veri almak için kullanılır.
 Veriyi sadece okur, hiçbir şeyi değiştirmez.
 
