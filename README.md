@@ -167,9 +167,9 @@ Download .NET:
 ## Senkron/Asenkron İşlemler
 Temel Kavramlar<br>
 1- Senkron (Synchronous)<br>
-&nbspİşlemler sırayla ve birbirini bekleyerek çalışır. Bir işlem bitmeden diğeri başlamaz.<br>
+> İşlemler sırayla ve birbirini bekleyerek çalışır. Bir işlem bitmeden diğeri başlamaz.<br>
 2-Asenkron (Asynchronous)<br>
-&nbspİşlemler bağımsız olarak çalışır. Bir işlem beklerken diğer işlemler devam edebilir.
+> İşlemler bağımsız olarak çalışır. Bir işlem beklerken diğer işlemler devam edebilir.
 
   
 
