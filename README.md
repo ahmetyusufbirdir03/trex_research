@@ -124,41 +124,45 @@ Learn more:
 Download .NET:
   https://aka.ms/dotnet/download
 ```
-1️⃣ .NET SDK (reflecting any global.json)
 
-Bu bölüm, aktif SDK sürümünü ve commit bilgisini gösterir.
-
-Version: Aktif .NET SDK sürümü (ör. 8.0.100)
-
-Commit: SDK’nın kaynak kod commit ID’si
-
-2️⃣ Runtime Environment
-
-Çalıştığın işletim sistemi ve ortam bilgilerini verir:
-
-OS Name / OS Version / OS Platform: İşletim sistemi bilgisi
-
-RID (Runtime Identifier): Platform için benzersiz kimlik (örn. win10-x64)
-
-Base Path: SDK’nın kurulu olduğu dizin
-
-3️⃣ Host (useful for support)
-
-.NET runtime’ın ana sürümü ve commit ID’si.
-
-Hata veya destek durumlarında kullanılabilir.
-
-4️⃣ .NET SDKs installed
-
-Sistemde yüklü olan tüm SDK sürümleri listelenir.
-
-Örnek: 7.0.203 ve 8.0.100
-
-5️⃣ .NET runtimes installed
-
-Sistemde yüklü tüm .NET çalışma zamanı (runtime) sürümleri listelenir.
-
-Örnek: Microsoft.NETCore.App 7.0.7 ve 8.0.0
+<ol>
+  <li>
+    <strong>.NET SDK (reflecting any global.json)</strong>
+    <ul>
+      <li>Aktif SDK sürümü ve commit bilgisini gösterir.</li>
+      <li><strong>Version:</strong> Aktif .NET SDK sürümü</li>
+      <li><strong>Commit:</strong> SDK’nın kaynak kod commit ID’si</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Runtime Environment</strong>
+    <ul>
+      <li>Çalıştığın işletim sistemi ve ortam bilgilerini verir:</li>
+      <li><strong>OS Name / OS Version / OS Platform:</strong> İşletim sistemi bilgisi</li>
+      <li><strong>RID (Runtime Identifier):</strong> Platform için benzersiz kimlik (örn. win-x64)</li>
+      <li><strong>Base Path:</strong> SDK’nın kurulu olduğu dizin</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Host</strong>
+    <ul>
+      <li>.NET runtime’ın ana sürümü ve commit ID’si.</li>
+      <li>Hata veya destek durumlarında kullanılabilir.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>.NET SDKs installed</strong>
+    <ul>
+      <li>Sistemde yüklü tüm SDK sürümleri listelenir.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>.NET runtimes installed</strong>
+    <ul>
+      <li>Sistemde yüklü tüm .NET runtime sürümleri listelenir.</li>
+    </ul>
+  </li>
+</ol>
 
 
   
