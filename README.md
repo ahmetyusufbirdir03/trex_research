@@ -277,3 +277,12 @@ DELETE https://api.example.com/users/3
 
 ```
 
+## API Türleri ve Farkları ##
+
+1. ** REST (Representational State Transfer)**
+     *HTTP protokolü üzerinde çalışır.
+     *Kaynaklar (resources) URL’lerle tanımlanır.
+     *İşlemler için HTTP metodları (GET, POST, PUT, DELETE...) kullanılır.
+     *Veriler genellikle JSON formatında döner.
+     *“Stateless” (durumsuz) bir mimaridir — her istek bağımsızdır.
+
