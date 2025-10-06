@@ -124,28 +124,28 @@ Learn more:
 Download .NET:
   https://aka.ms/dotnet/download
 ```
-Bu komut, sistemde hangi .NET sürümlerinin yüklü olduğunu, hangi SDK ve runtime’ın aktif olduğunu gösterir.
-.NET SDK (reflecting any global.json)
-Bu bölüm, aktif SDK sürümünü ve commit bilgisini gösterir.
-Version: Aktif .NET SDK sürümü (ör. 8.0.100)
-Commit: SDK’nın kaynak kod commit ID’si
-Runtime Environment
-Çalıştığın işletim sistemi ve ortam bilgilerini verir:
-OS Name / OS Version / OS Platform: İşletim sistemi bilgisi
-RID (Runtime Identifier): Platform için benzersiz kimlik (örn. win10-x64)
-Base Path: SDK’nın kurulu olduğu dizin
-Host (useful for support)
-.NET runtime’ın ana sürümü ve commit ID’si.
-Hata veya destek durumlarında kullanılabilir.
-.NET SDKs installed
-Sistemde yüklü olan tüm SDK sürümleri.
-Örnek: 7.0.203 ve 8.0.100
-.NET runtimes installed
-Sistemde yüklü tüm .NET çalışma zamanı (runtime) sürümleri.
-Örnek: Microsoft.NETCore.App 7.0.7 ve 8.0.0
-Not:
-Eğer bir proje için belirli bir SDK sürümü kullanılacaksa, global.json dosyası ile bu sürüm sabitlenebilir.
-Eksik SDK veya runtime varsa, belirtilen linkten indirilebilir.
+Bu komut, sistemde hangi .NET sürümlerinin yüklü olduğunu, hangi SDK ve runtime’ın aktif olduğunu gösterir.<br>
+.NET SDK (reflecting any global.json)<br>
+Bu bölüm, aktif SDK sürümünü ve commit bilgisini gösterir.<br>
+Version: Aktif .NET SDK sürümü (ör. 8.0.100)<br>
+Commit: SDK’nın kaynak kod commit ID’si<br>
+Runtime Environment<br>
+Çalıştığın işletim sistemi ve ortam bilgilerini verir:<br>
+OS Name / OS Version / OS Platform: İşletim sistemi bilgisi<br>
+RID (Runtime Identifier): Platform için benzersiz kimlik (örn. win10-x64)<br>
+Base Path: SDK’nın kurulu olduğu dizin<br>
+Host (useful for support)<br>
+.NET runtime’ın ana sürümü ve commit ID’si.<br>
+Hata veya destek durumlarında kullanılabilir.<br>
+.NET SDKs installed<br>
+Sistemde yüklü olan tüm SDK sürümleri.<br>
+Örnek: 7.0.203 ve 8.0.100<br>
+.NET runtimes installed<br>
+Sistemde yüklü tüm .NET çalışma zamanı (runtime) sürümleri.<br>
+Örnek: Microsoft.NETCore.App 7.0.7 ve 8.0.0<br>
+Not:<br>
+Eğer bir proje için belirli bir SDK sürümü kullanılacaksa, global.json dosyası ile bu sürüm sabitlenebilir.<br>
+Eksik SDK veya runtime varsa, belirtilen linkten indirilebilir.<br>
 
 
 
