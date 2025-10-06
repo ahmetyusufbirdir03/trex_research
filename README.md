@@ -565,10 +565,10 @@ Clean Architecture, bağımlılıkların ve sorumlulukların kontrol altında tu
 
 ### Katmanlar ###
 1. Domain (Alan / Core Katmanı)
-   * İş kuralları ve domain modelleri burada bulunur.
-   * Hiçbir dış bağımlılık içermez.
-     > Örnek: Order, Customer entity’leri, domain servisleri.
-   * Önemli: Diğer katmanlar domain’e bağımlı olabilir, ama domain hiçbir katmana bağımlı olmamalıdır.
+  * İş kuralları ve domain modelleri burada bulunur.
+  * Hiçbir dış bağımlılık içermez.
+    > Örnek: Order, Customer entity’leri, domain servisleri.
+  * Önemli: Diğer katmanlar domain’e bağımlı olabilir, ama domain hiçbir katmana bağımlı olmamalıdır.
 
 2.Application (Uygulama Katmanı)
    * Use-case’ler burada uygulanır.
@@ -576,9 +576,9 @@ Clean Architecture, bağımlılıkların ve sorumlulukların kontrol altında tu
      > Örnek: CreateOrderUseCase, CalculateInvoiceUseCase
 
 3. Infrastructure (Altyapı Katmanı)
-   * Veritabanı, dosya sistemi, API çağrıları, üçüncü parti servisler gibi dış bağımlılıkları içerir.
-   * Repository implementasyonları, mail servisleri vb.
+  * Veritabanı, dosya sistemi, API çağrıları, üçüncü parti servisler gibi dış bağımlılıkları içerir.
+  * Repository implementasyonları, mail servisleri vb.
 
 4. API / Presentation Katmanı
-   * Kullanıcı veya sistemle iletişimi sağlar (Controller, API, UI)
-   * Application katmanındaki use-case’leri çağırır
+  * Kullanıcı veya sistemle iletişimi sağlar (Controller, API, UI)
+  * Application katmanındaki use-case’leri çağırır
