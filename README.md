@@ -64,7 +64,7 @@ Bakım aşamasında, diğer görevlerin yanı sıra hatalar düzeltilir, müşte
 | **Kapsam**      | Eski Windows uygulamaları | Web, API, microservice                 | Web, API, mobil, bulut, IoT |
 | **Durum**       | Artık güncellenmiyor      | Yerini .NET 7/8 aldı                   | En güncel sürümler          |
 
-## "dotnet --info" Örneği ve İşlevi
+## "dotnet --info" Örneği
 ```bash
 C:\>dotnet --info
 ```
@@ -124,7 +124,7 @@ Learn more:
 Download .NET:
   https://aka.ms/dotnet/download
 ```
-
+## "dotnet --info" ile Neler Görülüyor?
 <ol>
   <li>
     <strong>.NET SDK (reflecting any global.json)</strong>
