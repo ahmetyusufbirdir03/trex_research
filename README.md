@@ -794,6 +794,12 @@ Neden Loglama Yapılır?
 * Güvenlik: Yetkisiz erişim denemeleri gibi olaylar raporlanır.
 * Debug / geliştirme: Geliştirici uygulamanın hangi adımda ne yaptığını görebilir.
 * Audit (denetim): Sistem kim tarafından, ne zaman, ne yaptı gibi olayları kaydeder.
+Bir Loglama Örneği:
+```bash
+_logger.LogInformation("Kullanıcı giriş yaptı: {UserName}", userName);
+_logger.LogWarning("Disk alanı azaldı!");
+_logger.LogError(ex, "Dosya okunamadı!");
+```
 ## Log Seviyeleri ##
 İşlem takiplerinin her duruma göre seviyeleri vardır. Yapım şekli veya anına göre değişebilirler. Bunları şekildeki gibi sıralayabiliriz;
 | LogLevel        | Açıklama                                    | Kullanım Örneği                        |
@@ -804,5 +810,6 @@ Neden Loglama Yapılır?
 | **Warning**     | Beklenmedik ama kritik olmayan durumlar     | Yavaş yanıt, geçici hata               |
 | **Error**       | Uygulama hatası                             | Exception fırlatıldı, işlem başarısız  |
 | **Critical**    | Uygulamanın çökmesine neden olabilecek hata | Servis erişilemiyor, sistem çökmesi    |
+
 
 
