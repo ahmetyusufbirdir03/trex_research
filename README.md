@@ -641,7 +641,7 @@ SELECT * FROM Students WHERE Age > 18;
 DbContext, Entity Framework’te veritabanı ile etkileşimi yöneten ana sınıftır. Veri tabanı ile olan bağlantıyı temsil eder. Veri ile işlemler yapılacağı zaman çağrılır ve CRUD (Create, Read, Update, Delete) işlemlerini gerçekleştirir.
 ## LINQ Nedir? ##
 LINQ (Language Integrated Query), C# içerisine gömülü bir sorgulama dilidir. EF Core ile birlikte veritabanı sorgularını C# sözdizimiyle yazmamızı sağlar.<br>
-Bazı metodlar ve sql karşılıkları;
+* Bazı metodlar ve sql karşılıkları;
 
 | LINQ Metodu            | Açıklama                                                    | SQL Karşılığı   |
 | ---------------------- | ----------------------------------------------------------- | --------------- |
@@ -723,4 +723,27 @@ OAuth (Open Authorization), üçüncü taraf uygulamaların kullanıcı adına e
    * Google kullanıcıya “Bu uygulama e-postalarına erişebilir mi?” diye sorar.
    * Kullanıcı izin verirse, Google o siteye sınırlı bir erişim token’ı verir.
 
+### OAuth 2.0 Nedir? ###
+OAuth 2.0, orijinal OAuth’un geliştirilmiş ve modern versiyonudur. 2.0 ile farklı platformlarda kullanılabilen bir özellik haline gelmiş ve OAuth protokolü daha esnek hale gelmiştir.
+### OpenID Connect (OIDC) Nedir? ###
+OpenID veya modern versiyonu OpenID Connect (OIDC) bir kimlik doğrulama protokolüdür. Amacı kullanıcının farklı sitelere tek bir dijital kimlik ile girişini sağlamaktır. Örneğin her e-ticaret sitesine girip kişisel bilgileri doldurmak yerine üçüüncü taraf platformlar (Google vb.) ile giriş yapıldğında bu platformlardaki kişisel bilgileriniz ile oluşturulmuş kimlik ile giriş yapılır.
 
+### OpenIddict Nedir? ###
+OpenIddict, .NET Core ve ASP.NET Core platformları için tasarlanmış açık kaynaklı bir kütüphanedir. Görevi, uygulamanızın kendi OAuth 2.0 Yetkilendirme Sunucusunu (Authorization Server) ve OpenID Connect Sağlayıcısını (Identity Provider) oluşturmasına izin vermektir.
+
+## Sistem Performansı ##
+Bir sistemin, kullanıcılara daha iyi ve hızlı cevap vermesi için yüksek performansa sahip olması gerekir. Bu sebeple sistemin prformansını arttıracak değişiklikler gerekebilir.
+### AsNoTracking() ###
+EF Core’da bir entity veritabanından alındığında Change Tracker tarafından izlenir.Ama sadece okuma yapılacaksa, bu gereksiz bir maliyettir.
+```bash
+var students = _context.Students.AsNoTracking().ToList();
+```
+AsNoTracking Kullanıldğında takip edilmez ve performansa artar.
+### Asenkron Programlama ve Akış Yönetimi ###
+Modern uygulamalar I/O (Giriş/Çıkış) operasyonlarında (veritabanı, ağ) beklememek için asenkron çalışmalıdır. Örneğin büyük bir veri seti çekilceği zaman sistemin kilitlenmemesi için bu işlem asenkron yapılmalıdır.
+```bash
+await foreach (var student in _context.Students.AsAsyncEnumerable())
+{
+    Console.WriteLine(student.Name);
+}
+```
