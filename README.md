@@ -794,3 +794,15 @@ Neden Loglama Yapılır?
 * Güvenlik: Yetkisiz erişim denemeleri gibi olaylar raporlanır.
 * Debug / geliştirme: Geliştirici uygulamanın hangi adımda ne yaptığını görebilir.
 * Audit (denetim): Sistem kim tarafından, ne zaman, ne yaptı gibi olayları kaydeder.
+## Log Seviyeleri ##
+İşlem takiplerinin her duruma göre seviyeleri vardır. Daha detaylı veya daha esnek olabilirler. Bunları şekildeki gibi sıralayabiliriz;
+| LogLevel        | Açıklama                                    | Kullanım Örneği                        |
+| --------------- | ------------------------------------------- | -------------------------------------- |
+| **Trace**       | En detaylı bilgi, genelde debugging için    | Metot giriş/çıkış bilgileri            |
+| **Debug**       | Geliştirme aşamasında hata ayıklama için    | Değişken değerleri, kontrol akışı      |
+| **Information** | Normal çalışma bilgileri                    | Kullanıcı giriş yaptı, servis çağrıldı |
+| **Warning**     | Beklenmedik ama kritik olmayan durumlar     | Yavaş yanıt, geçici hata               |
+| **Error**       | Uygulama hatası                             | Exception fırlatıldı, işlem başarısız  |
+| **Critical**    | Uygulamanın çökmesine neden olabilecek hata | Servis erişilemiyor, sistem çökmesi    |
+
+
