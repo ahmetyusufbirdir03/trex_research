@@ -668,6 +668,7 @@ Uygulamadaki sınıflar (modeller) yazılır ve veritabanı şeması bu sınıfl
 ### Database First ###
 Veritabanı mevcuttur ve ORM veritabanındaki şemaya göre koddaki sınıfları oluşturur. 
 
+## Code-First vs Database-First ##
 | Yaklaşım           | Açıklama                                                                        | Kullanım Durumu                                 |
 | ------------------ | ------------------------------------------------------------------------------- | ----------------------------------------------- |
 | **Code-First**     | Önce C# modellerini (class) yazarsın, EF bu modellerden veritabanını oluşturur. | Yeni projelerde tercih edilir.                  |
@@ -676,8 +677,48 @@ Veritabanı mevcuttur ve ORM veritabanındaki şemaya göre koddaki sınıfları
 ## Temel SQL Sorguları ##
 | Komut      | Açıklama         | Örnek                                                    |
 | ---------- | ---------------- | -------------------------------------------------------- |
-| **SELECT** | Veriyi okur      | SELECT * FROM Students;                                  |
-| **INSERT** | Yeni kayıt ekler | `INSERT INTO Students (Name, Age) VALUES ('Ahmet', 20);` |
-| **UPDATE** | Kayıt günceller  | `UPDATE Students SET Age = 21 WHERE Name = 'Ahmet';`     |
+| **SELECT** | Veriyi okur      | `SELECT * FROM Students;`                                |
+| **INSERT** | Yeni kayıt ekler | `INSERT INTO Students (Name, Age) VALUES ('Ahmet', 23);` |
+| **UPDATE** | Kayıt günceller  | `UPDATE Students SET Age = 23 WHERE Name = 'Ahmet';`     |
 | **DELETE** | Kayıt siler      | `DELETE FROM Students WHERE Name = 'Ahmet';`             |
+
+# Güvenlik ve Performans #
+## Authentication Nedir? ##
+Sisteme giriş yapmaya çalışan kullanıcının kim olduğunu doğrulayan sisteme denir.Kullanıcı bir sisteme erişmeye çalıştığında, sistem kullanıcının kimliğini doğrulamak için kullanıcıdan bazı bilgiler ister. Örneğin banka hesabına giriş yaparken kullanıcı adı ve şifresisin doğrulanmasıdır.
+## Authorization Nedir? ##
+Sistemde giriş yapmış kullanıcıların erişim izinlerini kontrol eder. Kullanıcının dosya, sayfa veya fonksiyonlar gibi çeşitli kaynaklardan hangileri ile işlem yapacağğını kontrol eder. Sistem rol, izin vb. tabanlı yöntemler ile erişimleri kontrol eder.
+
+## Authentication vs Authorization ##
+| Kavram                                | Açıklama                                                  | Örnek                                                    |
+| ------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------- |
+| **Authentication (Kimlik Doğrulama)** | Kullanıcının **kim olduğunu** doğrular. (Login işlemi)    | Kullanıcı adın ve şifren doğru mu?                       |
+| **Authorization (Yetkilendirme)**     | Doğrulanan kullanıcının **neyi yapabileceğini** belirler. | Kullanıcı admin mi, sadece kendi profilini mi görebilir? |
+
+## JSON Web Token ##
+Kullanan tarafların birbirleri arasındaki veri alışverişini ve bunun doğrulamasını sağlayan JSON tabanlı tanımlanmış açık bir standarttır. Bu standarda göre bir sunucu, bir kullanıcının yönetici olduğu bilgilerini içeren bir token değeri üretebilir, bu token'ı kullanıcıya gönderebilir, kullanıcı bu token'ı kullanarak yönetici özelliklerini kullanabilir.
+
+### JWT Yapısı ###
+| Bölüm         | Açıklama                               | Örnek                              |
+| ------------- | -------------------------------------- | ---------------------------------- |
+| **Header**    | Algoritma ve token tipi bilgisi        | `{ "alg": "HS256", "typ": "JWT" }` |
+| **Payload**   | Kullanıcı bilgileri (claims)           | `{ "userId": 1, "role": "Admin" }` |
+| **Signature** | Token’ın bozulmadığını kanıtlayan imza | SHA256 algoritmasıyla oluşturulur  |
+
+### JWT Nasıl Çalışır ###
+Örnek bir senaryo için;<br>
+1. Kullanıcı giriş yapmak için sisteme kullanıcı adı ve şifre bilgilerini girer.
+2. Sistem bu bilgileri doğrular
+3. Bilgiler doğru ise sistem bu bilgileri içeren bir JWT oluşturur ve frontende gönderir.
+4. Frontend kısmında bu token değerinu localstorage veya cookie'de saklar
+5. Sonraki isteklerde kullanıcı bu token sunucuya gönderilir ve sunucu bu token'i doğrular.
+
+##	OAuth, OAuth2.0, OpenIddict, OpenID ##
+### OAuth Nedir? ###
+OAuth (Open Authorization), üçüncü taraf uygulamaların kullanıcı adına erişim sağlamasına izin veren bir yetkilendirme protokolüdür.
+* Örnek:
+   * Kullanıcı Google hesabıyla başka bir siteye giriş yaparsa,
+   * Site kullanıcının şifresini görmez.
+   * Google kullanıcıya “Bu uygulama e-postalarına erişebilir mi?” diye sorar.
+   * Kullanıcı izin verirse, Google o siteye sınırlı bir erişim token’ı verir.
+
 
