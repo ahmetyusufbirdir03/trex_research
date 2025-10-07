@@ -641,7 +641,7 @@ SELECT * FROM Students WHERE Age > 18;
 DbContext, Entity Framework’te veritabanı ile etkileşimi yöneten ana sınıftır. Veri tabanı ile olan bağlantıyı temsil eder. Veri ile işlemler yapılacağı zaman çağrılır ve CRUD (Create, Read, Update, Delete) işlemlerini gerçekleştirir.
 ## LINQ Nedir? ##
 LINQ (Language Integrated Query), C# içerisine gömülü bir sorgulama dilidir. EF Core ile birlikte veritabanı sorgularını C# sözdizimiyle yazmamızı sağlar.
-* Bazı metodlar ve sql karşılıkları;
+* Bazı metodlar ve sql karşılıkları;<br>
 
 +-----------------------+-------------------------------------------------------------+-------------------+
 | LINQ Metodu           | Açıklama                                                    | SQL Karşılığı     |
