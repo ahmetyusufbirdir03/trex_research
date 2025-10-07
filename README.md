@@ -784,4 +784,12 @@ Uygulamanın ve altyapının üretim ortamındaki performansını sürekli izlen
 | **A09 – Security Logging & Monitoring Failures**   | Güvenlik olayları loglanmazsa saldırılar fark edilmez.                                  | ❌ **Kötü:**<br>`csharp catch { }`<br>✅ **Doğru:**<br>`csharp catch(Exception ex){ _logger.LogError(ex,"Login hatası"); }`                                                                          |
 | **A10 – Server-Side Request Forgery (SSRF)**       | Saldırgan, sunucunun iç kaynaklara erişmesini sağlar.                                   | ❌ **Kötü:**<br>`csharp var res = await http.GetStringAsync(userUrl);`<br>✅ **Doğru:**<br>`csharp if(!url.StartsWith("https://api.myapp.com")) return BadRequest();`                                |
 
+# Logging ve Hata Yönetimi #
+## Logging Nedir? Neden Yapılır? ##
+Loglama (Logging), uygulamanın çalışması sırasında gerçekleşen olayları kayıt altına alma işlemidir. Amaç, hataları, performans sorunlarını, kullanıcı davranışlarını veya sistem olaylarını izleyebilmek ve gerektiğinde geriye dönük analiz yapmaktır.
 
+* Hata tespiti: Exception’lar ve beklenmeyen durumlar kaydedilir.
+* Performans izleme: İşlem süreleri, servis yanıt süreleri vb. takip edilir.
+* Güvenlik: Yetkisiz erişim denemeleri gibi olaylar raporlanır.
+* Debug / geliştirme: Geliştirici uygulamanın hangi adımda ne yaptığını görebilir.
+* Audit (denetim): Sistem kim tarafından, ne zaman, ne yaptı gibi olayları kaydeder.
