@@ -793,8 +793,8 @@ Neden Loglama Yapılır?
 * Performans izleme: İşlem süreleri, servis yanıt süreleri vb. takip edilir.
 * Güvenlik: Yetkisiz erişim denemeleri gibi olaylar raporlanır.
 * Debug / geliştirme: Geliştirici uygulamanın hangi adımda ne yaptığını görebilir.
-* Audit (denetim): Sistem kim tarafından, ne zaman, ne yaptı gibi olayları kaydeder.<br><br>
-Bir Loglama Örneği:
+* Audit (denetim): Sistem kim tarafından, ne zaman, ne yaptı gibi olayları kaydeder.<br>
+> Bir Loglama Örneği:
 ```bash
 _logger.LogInformation("Kullanıcı giriş yaptı: {UserName}", userName);
 _logger.LogWarning("Disk alanı azaldı!");
