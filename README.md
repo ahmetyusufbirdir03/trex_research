@@ -715,7 +715,7 @@ Kullanan tarafların birbirleri arasındaki veri alışverişini ve bunun doğru
 5. Sonraki isteklerde kullanıcı bu token sunucuya gönderilir ve sunucu bu token'i doğrular.
 
 ##	OAuth, OAuth2.0, OpenIddict, OpenID ##
-### OAuth Nedir? ###
+### 1- OAuth Nedir? ###
 OAuth (Open Authorization), üçüncü taraf uygulamaların kullanıcı adına erişim sağlamasına izin veren bir yetkilendirme protokolüdür.
 * Örnek:
    * Kullanıcı Google hesabıyla başka bir siteye giriş yaparsa,
@@ -723,27 +723,39 @@ OAuth (Open Authorization), üçüncü taraf uygulamaların kullanıcı adına e
    * Google kullanıcıya “Bu uygulama e-postalarına erişebilir mi?” diye sorar.
    * Kullanıcı izin verirse, Google o siteye sınırlı bir erişim token’ı verir.
 
-### OAuth 2.0 Nedir? ###
+### 2- OAuth 2.0 Nedir? ###
 OAuth 2.0, orijinal OAuth’un geliştirilmiş ve modern versiyonudur. 2.0 ile farklı platformlarda kullanılabilen bir özellik haline gelmiş ve OAuth protokolü daha esnek hale gelmiştir.
-### OpenID Connect (OIDC) Nedir? ###
+### 3- OpenID Connect (OIDC) Nedir? ###
 OpenID veya modern versiyonu OpenID Connect (OIDC) bir kimlik doğrulama protokolüdür. Amacı kullanıcının farklı sitelere tek bir dijital kimlik ile girişini sağlamaktır. Örneğin her e-ticaret sitesine girip kişisel bilgileri doldurmak yerine üçüüncü taraf platformlar (Google vb.) ile giriş yapıldğında bu platformlardaki kişisel bilgileriniz ile oluşturulmuş kimlik ile giriş yapılır.
 
-### OpenIddict Nedir? ###
+### 4- OpenIddict Nedir? ###
 OpenIddict, .NET Core ve ASP.NET Core platformları için tasarlanmış açık kaynaklı bir kütüphanedir. Görevi, uygulamanızın kendi OAuth 2.0 Yetkilendirme Sunucusunu (Authorization Server) ve OpenID Connect Sağlayıcısını (Identity Provider) oluşturmasına izin vermektir.
 
 ## Sistem Performansı ##
 Bir sistemin, kullanıcılara daha iyi ve hızlı cevap vermesi için yüksek performansa sahip olması gerekir. Bu sebeple sistemin prformansını arttıracak değişiklikler gerekebilir.
-### AsNoTracking() ###
+### 1- AsNoTracking() ###
 EF Core’da bir entity veritabanından alındığında Change Tracker tarafından izlenir.Ama sadece okuma yapılacaksa, bu gereksiz bir maliyettir.
+* Örnek;
 ```bash
 var students = _context.Students.AsNoTracking().ToList();
 ```
 AsNoTracking Kullanıldğında takip edilmez ve performansa artar.
-### Asenkron Programlama ve Akış Yönetimi ###
+### 2- Asenkron Programlama ve Akış Yönetimi ###
 Modern uygulamalar I/O (Giriş/Çıkış) operasyonlarında (veritabanı, ağ) beklememek için asenkron çalışmalıdır. Örneğin büyük bir veri seti çekilceği zaman sistemin kilitlenmemesi için bu işlem asenkron yapılmalıdır.
+* Örnek;
 ```bash
 await foreach (var student in _context.Students.AsAsyncEnumerable())
 {
     Console.WriteLine(student.Name);
 }
+```
+### 3-Caching(Önbellekleme) ###
+Sistemde sık kullanılan ya da değişmeyen veriler, veri tabanına yük bindirmemesi için bellekte(veya dış sistemlerde) saklanır.
+* Örnek;
+```bash
+var students = memoryCache.GetOrCreate("students", entry =>
+{
+    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10);
+    return _context.Students.ToList();
+});
 ```
