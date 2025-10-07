@@ -763,3 +763,23 @@ var students = memoryCache.GetOrCreate("students", entry =>
     return _context.Students.ToList();
 });
 ```
+### 4-Performans Analizi ve İzleme ###
+Optimizasyona başlamadan önce, sistemi zorlayan kod parçalarını bulmak için yapılan işlemlerdir.
+1. Profiling (Profil Çıkarma)
+Kodun hangi bölümlerinin ne kadar zaman ve kaynak (CPU, bellek) tükettiğini analiz etme sürecidir.
+2. Monitoring (İzleme)
+Uygulamanın ve altyapının üretim ortamındaki performansını sürekli izlenmesidir.
+
+| No                                                   | Açıklama                                                                                                                   |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **A01 – Broken Access Control**                      | Yetki kontrollerinin doğru uygulanmaması nedeniyle kullanıcıların erişmemesi gereken verilere veya işlemlere erişebilmesi. |
+| **A02 – Cryptographic Failures**                     | Hassas verilerin (şifreler, kart bilgileri, tokenlar) zayıf veya hiç şifrelenmeden saklanması.                             |
+| **A03 – Injection**                                  | SQL, NoSQL veya komut satırı sorgularına kötü niyetli veri enjekte edilmesi. En yaygın örneği SQL Injection’dır.           |
+| **A04 – Insecure Design**                            | Güvenlik ilkeleri dikkate alınmadan tasarlanmış sistem mimarileri veya iş akışları.                                        |
+| **A05 – Security Misconfiguration**                  | Yanlış yapılandırmalar: debug modunun açık kalması, varsayılan parolalar, gereksiz servislerin çalışması vb.               |
+| **A06 – Vulnerable and Outdated Components**         | Eski sürüm framework, kütüphane veya modüllerin kullanılması sonucu oluşan zafiyetler.                                     |
+| **A07 – Identification and Authentication Failures** | Kimlik doğrulama veya oturum yönetimi hataları. Örn: Zayıf parola politikaları, hatalı token doğrulama.                    |
+| **A08 – Software and Data Integrity Failures**       | Kod veya verinin bütünlüğünün doğrulanmaması. Örn: imzasız güncellemeler veya zararlı bağımlılıklar.                       |
+| **A09 – Security Logging and Monitoring Failures**   | Güvenlik olaylarının loglanmaması veya zamanında tespit edilememesi.                                                       |
+| **A10 – Server-Side Request Forgery (SSRF)**         | Saldırganın sunucuyu kullanarak dış sistemlere kötü niyetli istek göndermesi.                                              |
+
