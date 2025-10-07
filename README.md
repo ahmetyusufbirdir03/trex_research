@@ -628,7 +628,7 @@ Entity Framework Core, .NET platformu için geliştirilmiş modern bir ORM küt�
   * SQL sorguları yazmadan C# ile veritabanı işlemleri yapılır.
   * Code-First veya Database-First yaklaşımlarıyla tablo ve modeller otomatik oluşturulur.
   * Farklı veritabanı sistemleri (SQL Server, PostgreSQL, SQLite vb.) desteklenir.<br>
-Örnek;
+  * Örnek;
   > C# kodundaki bu kısmı;
 ```bash
 var students = _context.Students.Where(s => s.Age > 18).ToList();
