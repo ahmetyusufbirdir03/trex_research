@@ -608,5 +608,17 @@ SQL (Structured Query Language), veritabanlarıyla iletişim kurmak için kullan
 ```bash
 SELECT * FROM Students WHERE Age > 18;
 ```
+## Veritabanı İlişkileri ##
+### İlişkisel Veritabanları ###
+* İlişkisel veritabanları, yapılandırılmış verileri birbirleri ile bağlantılı tablolar halinde tutan yapılardır. 
+* İlişkisel veritabanlarınad bağlantılar ortak anahtarlar(Birincil veya yabancıl anahtar) ile yapılır. 
+* Çoğunlukla SQL sorgu dili kullanılır. 
+* Yüksesk veri bütünlüğü sağlayabilirler.
+### İlişkisel Olmayan Veritabanları ###
+* İlişkisel olmayan veritabanları genellikle NoSQL olarak adlandırılır.
+* Veriyi tablolar yerine farklı yapı ve formatlarda depolarlar
+   > Formatlar : Belge(JSON vb), Anahtar-Değer çiftleri, Sütun Aileleri, Graph'lar
+* Genellikle daha esnek bir şemaya sahip olan sistemlerdir
+* Büyük hacimli, hızlı değişen ve yapılandırılmamış verileri yönetmek için ortaya çıkmışlardır.
 
 
