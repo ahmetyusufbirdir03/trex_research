@@ -820,30 +820,54 @@ app.UseExceptionHandler("/Home/Error");
 ```
 > CustomMiddleware
 ```bash
-public class ExceptionMiddleware
+public class ExceptionMiddleware : IMiddleware
 {
-    private readonly RequestDelegate _next;
-    private readonly ILogger<ExceptionMiddleware> _logger;
-
-    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
-    {
-        _next = next;
-        _logger = logger;
-    }
-
-    public async Task Invoke(HttpContext context)
+    public async Task InvokeAsync(HttpContext httpContext, RequestDelegate next)
     {
         try
         {
-            await _next(context); // sonraki middleware’e geç
+            await next(httpContext);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Global hata yakalandı!");
-            context.Response.StatusCode = 500;
-            await context.Response.WriteAsJsonAsync(new { error = "Bir hata oluştu." });
+            await HandleExceptionAsync(httpContext, ex);
         }
     }
+
+    private static Task HandleExceptionAsync(HttpContext httpContext, Exception exception)
+    {
+        int statusCode = GetStatusCode(exception);
+        httpContext.Response.ContentType = "application/json";
+        httpContext.Response.StatusCode = statusCode;
+
+        if (exception.GetType() == typeof(ValidationException))
+            return httpContext.Response.WriteAsync(new ExceptionModel
+            {
+                Errors = ((ValidationException)exception).Errors.Select(x => x.ErrorMessage),
+                StatusCode = StatusCodes.Status400BadRequest
+            }.ToString());
+
+        List<string> errors = new()
+            {
+                $"Hata Mesajı : {exception.Message}"
+            };
+
+        return httpContext.Response.WriteAsync(new ExceptionModel
+        {
+            Errors = errors,
+            StatusCode = statusCode
+        }.ToString());
+
+    }
+
+    private static int GetStatusCode(Exception exception) =>
+        exception switch
+        {
+            BadRequestException => StatusCodes.Status400BadRequest,
+            NotFoundException => StatusCodes.Status400BadRequest,
+            ValidationException => StatusCodes.Status422UnprocessableEntity,
+            _ => StatusCodes.Status500InternalServerError
+        };
 }
 ```
 
