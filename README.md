@@ -786,7 +786,7 @@ Uygulamanın ve altyapının üretim ortamındaki performansını sürekli izlen
 
 # Logging ve Hata Yönetimi #
 ## Logging Nedir? Neden Yapılır? ##
-Loglama (Logging), uygulamanın çalışması sırasında gerçekleşen olayları kayıt altına alma işlemidir. Amaç, hataları, performans sorunlarını, kullanıcı davranışlarını veya sistem olaylarını izleyebilmek ve gerektiğinde geriye dönük analiz yapmaktır.<br>
+Loglama (Logging), uygulamanın çalışması sırasında gerçekleşen olayları kayıt altına alma işlemidir. Amaç, hataları, performans sorunlarını, kullanıcı davranışlarını veya sistem olaylarını izleyebilmek ve gerektiğinde geriye dönük analiz yapmaktır.<br><br>
 Neden Loglama Yapılır?
 * Hata tespiti: Exception’lar ve beklenmeyen durumlar kaydedilir.
 * Performans izleme: İşlem süreleri, servis yanıt süreleri vb. takip edilir.
