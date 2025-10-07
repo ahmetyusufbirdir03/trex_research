@@ -604,6 +604,8 @@ Clean Architecture, bağımlılıkların ve sorumlulukların kontrol altında tu
 ## SQL Nedir? ##
 SQL (Structured Query Language), veritabanlarıyla iletişim kurmak için kullanılan bir sorgulama dilidir. Veri tabanı üzerinde okuma, yazma, silme, ekleme ve diğer tablo işlemleri yapılmasını sağlar. Kısaca veri ne yapılması gerektiğini anlatır.
 * Örnek Sorgu;
-```bash SELECT * FROM Students WHERE Age > 18; ```
+```bash
+SELECT * FROM Students WHERE Age > 18;
+```
 
 
