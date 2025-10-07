@@ -633,7 +633,51 @@ Entity Framework Core, .NET platformu için geliştirilmiş modern bir ORM küt�
 ```bash
 var students = _context.Students.Where(s => s.Age > 18).ToList();
 ```
-> Aşağıdaki kısma çevirir
+> Arkaplanda aşağıdaki kısma çevirir
 ```bash
 SELECT * FROM Students WHERE Age > 18;
 ```
+## DbContext ##
+DbContext, Entity Framework’te veritabanı ile etkileşimi yöneten ana sınıftır. Veri tabanı ile olan bağlantıyı temsil eder. Veri ile işlemler yapılacağı zaman çağrılır ve CRUD (Create, Read, Update, Delete) işlemlerini gerçekleştirir.
+## LINQ Nedir? ##
+LINQ (Language Integrated Query), C# içerisine gömülü bir sorgulama dilidir. EF Core ile birlikte veritabanı sorgularını C# sözdizimiyle yazmamızı sağlar.
+* Bazı metodlar ve sql karşılıkları;
+| LINQ Metodu            | Açıklama              | SQL Karşılığı   |
+| ---------------------- | --------------------- | --------------- |
+| `.Where()`             | Filtreleme yapar      | `WHERE`         |
+| `.Select()`            | Kolon seçimi          | `SELECT`        |
+| `.OrderBy()`           | Artan sırada sıralar  | `ORDER BY ASC`  |
+| `.OrderByDescending()` | Azalan sırada sıralar | `ORDER BY DESC` |
+| `.FirstOrDefault()`    | İlk kaydı döndürür    | `TOP 1`         |
+| `.Any()`               | Kayıt var mı kontrolü | `EXISTS`        |
+| `.Count()`             | Sayım yapar           | `COUNT(*)`      |
+| `.Join()`              | Tabloları birleştirir | `JOIN`          |
+
+> Örnek;
+```bash
+var adults = context.Students
+    .Where(s => s.Age > 18)
+    .OrderBy(s => s.Name)
+    .Select(s => new { s.Name, s.Age })
+    .ToList();
+```
+## Code-First ve Database-First Yaklaşımı ##
+Veritabanı ile uygulama kodunun nasıl yönetileceğine dair iki ana yaklaşım vardır. 
+### Code First ###
+Uygulamadaki sınıflar (modeller) yazılır ve veritabanı şeması bu sınıflara göre otomatik olarak oluşturulur.
+### Database First ###
+Veritabanı mevcuttur ve ORM veritabanındaki şemaya göre koddaki sınıfları oluşturur. 
+
+| Yaklaşım           | Açıklama                                                                        | Kullanım Durumu                                 |
+| ------------------ | ------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **Code-First**     | Önce C# modellerini (class) yazarsın, EF bu modellerden veritabanını oluşturur. | Yeni projelerde tercih edilir.                  |
+| **Database-First** | Var olan veritabanından EF otomatik olarak C# modellerini üretir.               | Mevcut bir veritabanına bağlanırken kullanılır. |
+
+## Temel SQL Sorguları ##
+| Komut      | Açıklama         | Örnek                                                    |
+| ---------- | ---------------- | -------------------------------------------------------- |
+| **SELECT** | Veriyi okur      | `SELECT * FROM Students;`                                |
+| **INSERT** | Yeni kayıt ekler | `INSERT INTO Students (Name, Age) VALUES ('Ahmet', 20);` |
+| **UPDATE** | Kayıt günceller  | `UPDATE Students SET Age = 21 WHERE Name = 'Ahmet';`     |
+| **DELETE** | Kayıt siler      | `DELETE FROM Students WHERE Name = 'Ahmet';`             |
+
