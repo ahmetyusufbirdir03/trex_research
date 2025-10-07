@@ -621,4 +621,11 @@ SELECT * FROM Students WHERE Age > 18;
 * Genellikle daha esnek bir şemaya sahip olan sistemlerdir
 * Büyük hacimli, hızlı değişen ve yapılandırılmamış verileri yönetmek için ortaya çıkmışlardır.
 
-
+## ORM Nedir? ##
+ORM(Object Relational Mapping) nesne tabanlı programlama dilleri ile ilişkisel veritabanları arasında iletişim kurmaya yarayan yapıdır. Kod içindeki class'ları veri tabanındaki tablolara dönüştürür. Böylece sorgu yazmak yerine kod ile veri işlemleri yapılabilir.
+## EF Core (ORM Kütüphanesi) ##
+Entity Framework Core, .NET platformu için geliştirilmiş modern bir ORM kütüphanesidir.
+EF Core'un sağladıkları:
+  * SQL sorguları yazmadan C# ile veritabanı işlemleri yapılır.
+  * Code-First veya Database-First yaklaşımlarıyla tablo ve modeller otomatik oluşturulur.
+  * Farklı veritabanı sistemleri (SQL Server, PostgreSQL, SQLite vb.) desteklenir.
