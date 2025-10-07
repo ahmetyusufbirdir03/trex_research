@@ -811,5 +811,40 @@ _logger.LogError(ex, "Dosya okunamadı!");
 | **Error**       | Uygulama hatası                             | Exception fırlatıldı, işlem başarısız  |
 | **Critical**    | Uygulamanın çökmesine neden olabilecek hata | Servis erişilemiyor, sistem çökmesi    |
 
+## Global Exception Handling Nedir? Nasıl Yapılır? ##
+Global Exception Handling, uygulama genelinde yakalanamayan hataları tek bir yerden yönetmek için kullanılan yapıdır. Amaç kullanıcıya anlaşılır bir mesaj dönmektir. UseExceptionHandler kullanarak veya CustomMiddleware yazılarak yapılır.
+Örnek;
+> UseExceptionHandler
+```bash
+app.UseExceptionHandler("/Home/Error");
+```
+> CustomMiddleware
+```bash
+public class ExceptionMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<ExceptionMiddleware> _logger;
+
+    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
+    {
+        _next = next;
+        _logger = logger;
+    }
+
+    public async Task Invoke(HttpContext context)
+    {
+        try
+        {
+            await _next(context); // sonraki middleware’e geç
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Global hata yakalandı!");
+            context.Response.StatusCode = 500;
+            await context.Response.WriteAsJsonAsync(new { error = "Bir hata oluştu." });
+        }
+    }
+}
+```
 
 
