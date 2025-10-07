@@ -642,6 +642,7 @@ DbContext, Entity Framework’te veritabanı ile etkileşimi yöneten ana sını
 ## LINQ Nedir? ##
 LINQ (Language Integrated Query), C# içerisine gömülü bir sorgulama dilidir. EF Core ile birlikte veritabanı sorgularını C# sözdizimiyle yazmamızı sağlar.
 * Bazı metodlar ve sql karşılıkları;
+<br>
 | LINQ Metodu            | Açıklama              | SQL Karşılığı   |
 | ---------------------- | --------------------- | --------------- |
 | `.Where()`             | Filtreleme yapar      | `WHERE`         |
