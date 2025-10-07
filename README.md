@@ -795,7 +795,7 @@ Neden Loglama Yapılır?
 * Debug / geliştirme: Geliştirici uygulamanın hangi adımda ne yaptığını görebilir.
 * Audit (denetim): Sistem kim tarafından, ne zaman, ne yaptı gibi olayları kaydeder.
 ## Log Seviyeleri ##
-İşlem takiplerinin her duruma göre seviyeleri vardır. Daha detaylı veya daha esnek olabilirler. Bunları şekildeki gibi sıralayabiliriz;
+İşlem takiplerinin her duruma göre seviyeleri vardır. Yapım şekli veya anına göre değişebilirler. Bunları şekildeki gibi sıralayabiliriz;
 | LogLevel        | Açıklama                                    | Kullanım Örneği                        |
 | --------------- | ------------------------------------------- | -------------------------------------- |
 | **Trace**       | En detaylı bilgi, genelde debugging için    | Metot giriş/çıkış bilgileri            |
