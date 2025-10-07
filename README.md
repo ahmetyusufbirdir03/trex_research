@@ -770,6 +770,7 @@ Kodun hangi bölümlerinin ne kadar zaman ve kaynak (CPU, bellek) tükettiğini 
 2. Monitoring (İzleme)
 Uygulamanın ve altyapının üretim ortamındaki performansını sürekli izlenmesidir.
 
+## OWASP TOP 10 ##
 | No                                                   | Açıklama                                                                                                                   |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | **A01 – Broken Access Control**                      | Yetki kontrollerinin doğru uygulanmaması nedeniyle kullanıcıların erişmemesi gereken verilere veya işlemlere erişebilmesi. |
