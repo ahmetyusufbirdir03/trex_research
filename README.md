@@ -643,19 +643,16 @@ DbContext, Entity Framework’te veritabanı ile etkileşimi yöneten ana sını
 LINQ (Language Integrated Query), C# içerisine gömülü bir sorgulama dilidir. EF Core ile birlikte veritabanı sorgularını C# sözdizimiyle yazmamızı sağlar.<br>
 Bazı metodlar ve sql karşılıkları;
 
-+-----------------------+-------------------------------------------------------------+-------------------+
-| LINQ Metodu           | Açıklama                                                    | SQL Karşılığı     |
-+-----------------------+-------------------------------------------------------------+-------------------+
-| .Where()              | Belirtilen bir koşula göre filtreleme yapar.                | WHERE             |
-| .Select()             | Sonuç kümesinden hangi kolonların seçileceğini belirler.    | SELECT            |
-| .OrderBy()            | Sonuçları artan sırada (ascending) sıralar.                 | ORDER BY ASC      |
-| .OrderByDescending()  | Sonuçları azalan sırada (descending) sıralar.               | ORDER BY DESC     |
-| .FirstOrDefault()     | Koşulla eşleşen ilk kaydı döndürür, yoksa varsayılan döner. | SELECT TOP 1      |
-| .Any()                | Belirtilen koşula uygun kayıt olup olmadığını kontrol eder. | EXISTS            |
-| .Count()              | Koşulu sağlayan kayıt sayısını hesaplar.                    | COUNT(*)          |
-| .Join()               | Ortak bir anahtar (key) kullanarak iki tabloyu birleştirir. | JOIN              |
-+-----------------------+-------------------------------------------------------------+-------------------+
-
+| LINQ Metodu            | Açıklama                                                    | SQL Karşılığı   |
+| ---------------------- | ----------------------------------------------------------- | --------------- |
+| `.Where()`             | Belirtilen bir koşula göre filtreleme yapar.                | `WHERE`         |
+| `.Select()`            | Sonuç kümesinden hangi kolonların seçileceğini belirler.    | `SELECT`        |
+| `.OrderBy()`           | Sonuçları artan sırada (ascending) sıralar.                 | `ORDER BY ASC`  |
+| `.OrderByDescending()` | Sonuçları azalan sırada (descending) sıralar.               | `ORDER BY DESC` |
+| `.FirstOrDefault()`    | Koşulla eşleşen ilk kaydı döndürür, yoksa varsayılan döner. | `SELECT TOP 1`  |
+| `.Any()`               | Belirtilen koşula uygun kayıt olup olmadığını kontrol eder. | `EXISTS`        |
+| `.Count()`             | Koşulu sağlayan kayıt sayısını hesaplar.                    | `COUNT(*)`      |
+| `.Join()`              | Ortak bir anahtar (key) kullanarak iki tabloyu birleştirir. | `JOIN`          |
 
 
 > Örnek;
