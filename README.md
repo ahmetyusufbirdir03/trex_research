@@ -751,6 +751,10 @@ await foreach (var student in _context.Students.AsAsyncEnumerable())
 ```
 ### 3-Caching(Önbellekleme) ###
 Sistemde sık kullanılan ya da değişmeyen veriler, veri tabanına yük bindirmemesi için bellekte(veya dış sistemlerde) saklanır.
+1. Memory Caching<br>
+Verinin, uygulamanın çalıştığı sunucunun RAM'inde (belleğinde) geçici olarak tutulmasıdır. En hızlı önbellekleme türüdür.
+2. Redis<br>
+Bellek içi (In-memory), dağıtık bir anahtar-değer (Key-Value) veritabanıdır. Veriyi uygulamanın belleğinden ayrı, merkezi bir yerde tutar.
 * Örnek;
 ```bash
 var students = memoryCache.GetOrCreate("students", entry =>
