@@ -676,9 +676,7 @@ Veritabanı mevcuttur ve ORM veritabanındaki şemaya göre koddaki sınıfları
 ## Temel SQL Sorguları ##
 | Komut      | Açıklama         | Örnek                                                    |
 | ---------- | ---------------- | -------------------------------------------------------- |
-| **SELECT** | Veriyi okur      | ```bash 
-SELECT * FROM Students; 
-```                                |
+| **SELECT** | Veriyi okur      | SELECT * FROM Students;                                  |
 | **INSERT** | Yeni kayıt ekler | `INSERT INTO Students (Name, Age) VALUES ('Ahmet', 20);` |
 | **UPDATE** | Kayıt günceller  | `UPDATE Students SET Age = 21 WHERE Name = 'Ahmet';`     |
 | **DELETE** | Kayıt siler      | `DELETE FROM Students WHERE Name = 'Ahmet';`             |
