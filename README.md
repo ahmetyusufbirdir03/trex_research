@@ -931,3 +931,18 @@ Temiz kod, bir kodun çalışması dışında okunabilir ve geliştirilebilir ol
   def save_user(data): ...
   def notify_user(data): ...
   ```
+
+  ## Yazılım Mimarileri ##
+  | Mimari Türü                             | Temel Yapı                                                       | Avantajları                                            | Dezavantajları                                   | Kullanım Alanı                                        |
+| --------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------- |
+| **Monolithic Architecture**             | Tüm bileşenler tek bir yapı içinde (tek deploy edilebilir dosya) | Basit geliştirme ve dağıtım, küçük projelerde hızlı    | Kod büyüdükçe karmaşıklaşır, ölçeklenmesi zordur | Küçük ve orta ölçekli uygulamalar                     |
+| **Layered (N-Tier) Architecture**       | Uygulama katmanlara ayrılmıştır (UI, Business, Data vb.)         | Katmanlar arası ayrım net, bakımı kolay                | Fazla katman → performans kaybı                  | Kurumsal web uygulamaları                             |
+| **Client-Server Architecture**          | Client istekte bulunur, server yanıt verir                       | Merkezi kontrol, güvenli veri yönetimi                 | Sunucu yüklenirse tüm sistem yavaşlar            | Web, oyun sunucuları, FTP                             |
+| **Microservices Architecture**          | Uygulama küçük bağımsız servislerden oluşur                      | Her servis bağımsız geliştirilebilir ve ölçeklenebilir | Yönetimi ve izleme karmaşık                      | Büyük ölçekli sistemler (Netflix, Amazon)             |
+| **Service-Oriented Architecture (SOA)** | Servisler belirli işlevleri sunar, ESB ile haberleşir            | Uygulamalar arası entegrasyon kolay                    | ESB (Enterprise Service Bus) karmaşık yapı       | Kurumsal entegrasyon sistemleri                       |
+| **Event-Driven Architecture**           | Bileşenler olaylar (event) üzerinden haberleşir                  | Asenkron, yüksek performanslı, gevşek bağlı            | Debug zor, event trafiği karmaşık                | Gerçek zamanlı sistemler (IoT, finans)                |
+| **MVC (Model-View-Controller)**         | Model, View, Controller ayrımı ile yapı                          | Kod düzeni net, test edilebilir                        | Küçük projelerde fazla soyutlama                 | Web framework’leri (Django, ASP.NET, Spring MVC)      |
+| **MVVM (Model-View-ViewModel)**         | UI ile iş mantığı ViewModel aracılığıyla bağlanır                | UI bağımsızlığı, veri bağlama (data binding)           | Öğrenmesi zor                                    | Mobil, masaüstü UI uygulamaları (React, Flutter, WPF) |
+| **Hexagonal (Ports and Adapters)**      | Uygulama çekirdeği dış dünyadan soyutlanır                       | Bağımlılıklar azaltılır, test edilebilirlik artar      | Yeni başlayanlar için soyutlama karmaşık         | Büyük ölçekli domain bazlı projeler                   |
+| **Clean Architecture**                  | Katmanlar bağımlılık yönüne göre düzenlenir (domain merkezde)    | Yüksek bağımsızlık, kolay test edilebilir              | Tasarımı zaman alır                              | Orta-büyük projeler, mikroservisler                   |
+
