@@ -932,17 +932,18 @@ Temiz kod, bir kodun çalışması dışında okunabilir ve geliştirilebilir ol
   def notify_user(data): ...
   ```
 
-  ## Yazılım Mimarileri ##
-  | Mimari Türü                             | Temel Yapı                                                       | Avantajları                                            | Dezavantajları                                   | Kullanım Alanı                                        |
-| --------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------- |
-| **Monolithic Architecture**             | Tüm bileşenler tek bir yapı içinde (tek deploy edilebilir dosya) | Basit geliştirme ve dağıtım, küçük projelerde hızlı    | Kod büyüdükçe karmaşıklaşır, ölçeklenmesi zordur | Küçük ve orta ölçekli uygulamalar                     |
-| **Layered (N-Tier) Architecture**       | Uygulama katmanlara ayrılmıştır (UI, Business, Data vb.)         | Katmanlar arası ayrım net, bakımı kolay                | Fazla katman → performans kaybı                  | Kurumsal web uygulamaları                             |
-| **Client-Server Architecture**          | Client istekte bulunur, server yanıt verir                       | Merkezi kontrol, güvenli veri yönetimi                 | Sunucu yüklenirse tüm sistem yavaşlar            | Web, oyun sunucuları, FTP                             |
-| **Microservices Architecture**          | Uygulama küçük bağımsız servislerden oluşur                      | Her servis bağımsız geliştirilebilir ve ölçeklenebilir | Yönetimi ve izleme karmaşık                      | Büyük ölçekli sistemler (Netflix, Amazon)             |
-| **Service-Oriented Architecture (SOA)** | Servisler belirli işlevleri sunar, ESB ile haberleşir            | Uygulamalar arası entegrasyon kolay                    | ESB (Enterprise Service Bus) karmaşık yapı       | Kurumsal entegrasyon sistemleri                       |
-| **Event-Driven Architecture**           | Bileşenler olaylar (event) üzerinden haberleşir                  | Asenkron, yüksek performanslı, gevşek bağlı            | Debug zor, event trafiği karmaşık                | Gerçek zamanlı sistemler (IoT, finans)                |
-| **MVC (Model-View-Controller)**         | Model, View, Controller ayrımı ile yapı                          | Kod düzeni net, test edilebilir                        | Küçük projelerde fazla soyutlama                 | Web framework’leri (Django, ASP.NET, Spring MVC)      |
-| **MVVM (Model-View-ViewModel)**         | UI ile iş mantığı ViewModel aracılığıyla bağlanır                | UI bağımsızlığı, veri bağlama (data binding)           | Öğrenmesi zor                                    | Mobil, masaüstü UI uygulamaları (React, Flutter, WPF) |
-| **Hexagonal (Ports and Adapters)**      | Uygulama çekirdeği dış dünyadan soyutlanır                       | Bağımlılıklar azaltılır, test edilebilirlik artar      | Yeni başlayanlar için soyutlama karmaşık         | Büyük ölçekli domain bazlı projeler                   |
-| **Clean Architecture**                  | Katmanlar bağımlılık yönüne göre düzenlenir (domain merkezde)    | Yüksek bağımsızlık, kolay test edilebilir              | Tasarımı zaman alır                              | Orta-büyük projeler, mikroservisler                   |
+## Yazılım Mimarileri ##
 
+| Mimari Türü | Temel Yapı | Avantajları | Dezavantajları | Kullanım Alanı |
+|--------------|-------------|--------------|----------------|----------------|
+| **Monolithic** | Tüm bileşenler tek bir yapı içinde | Basit geliştirme ve dağıtım<br>Küçük projelerde hızlı | Kod büyüdükçe karmaşıklaşır<br>Ölçeklenmesi zordur | Küçük / Orta ölçekli uygulamalar |
+| **Layered (N-Tier)** | Uygulama katmanlara ayrılmıştır (UI, Business, Data) | Katmanlar arası ayrım net<br>Bakımı kolay | Fazla katman → performans kaybı | Kurumsal web uygulamaları |
+| **Client–Server** | Client istekte bulunur, Server yanıt verir | Merkezi kontrol<br>Güvenli veri yönetimi | Sunucu yüklenirse tüm sistem yavaşlar | Web, oyun, FTP sistemleri |
+| **Microservices** | Uygulama küçük bağımsız servislerden oluşur | Her servis bağımsızdır<br>Kolay ölçeklenir | Yönetim ve izleme karmaşık | Büyük ölçekli sistemler (Netflix, Amazon) |
+| **SOA (Service-Oriented)** | Servisler ESB (Enterprise Service Bus) ile haberleşir | Entegrasyon kolay<br>Servis paylaşımı mümkündür | ESB yapısı karmaşık | Kurumsal entegrasyon sistemleri |
+| **Event-Driven** | Bileşenler event (olay) üzerinden iletişim kurar | Asenkron yapı<br>Yüksek performans | Debug ve event takibi zor | Gerçek zamanlı sistemler (IoT, finans) |
+| **MVC (Model–View–Controller)** | Model, View ve Controller ayrımı | Kod düzenli<br>Test edilebilir | Küçük projelerde fazla soyutlama | Web framework’leri (Django, ASP.NET) |
+| **MVVM (Model–View–ViewModel)** | ViewModel veri bağlama sağlar | UI bağımsızlığı<br>Data binding avantajı | Öğrenmesi zor | Mobil / Masaüstü UI (React, Flutter, WPF) |
+| **Hexagonal (Ports & Adapters)** | Uygulama çekirdeği dış dünyadan soyutlanır | Bağımlılıklar azalır<br>Test edilebilirlik artar | Soyutlama karmaşık olabilir | Büyük domain bazlı projeler |
+| **Clean Architecture** | Katmanlar bağımlılık yönüne göre düzenlenir | Yüksek bağımsızlık<br>Kolay test edilebilir | Tasarımı zaman alır | Orta–büyük ölçekli projeler |
+  
