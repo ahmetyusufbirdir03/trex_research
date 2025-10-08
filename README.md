@@ -934,16 +934,18 @@ Temiz kod, bir kodun çalışması dışında okunabilir ve geliştirilebilir ol
 
 ## Yazılım Mimarileri ##
 
-| Mimari Türü | Temel Yapı | Avantajları | Dezavantajları | Kullanım Alanı |
-|--------------|-------------|--------------|----------------|----------------|
-| **Monolithic** | Tüm bileşenler tek bir yapı içinde | Basit geliştirme ve dağıtım<br>Küçük projelerde hızlı | Kod büyüdükçe karmaşıklaşır<br>Ölçeklenmesi zordur | Küçük / Orta ölçekli uygulamalar |
-| **Layered (N-Tier)** | Uygulama katmanlara ayrılmıştır (UI, Business, Data) | Katmanlar arası ayrım net<br>Bakımı kolay | Fazla katman → performans kaybı | Kurumsal web uygulamaları |
-| **Client–Server** | Client istekte bulunur, Server yanıt verir | Merkezi kontrol<br>Güvenli veri yönetimi | Sunucu yüklenirse tüm sistem yavaşlar | Web, oyun, FTP sistemleri |
-| **Microservices** | Uygulama küçük bağımsız servislerden oluşur | Her servis bağımsızdır<br>Kolay ölçeklenir | Yönetim ve izleme karmaşık | Büyük ölçekli sistemler (Netflix, Amazon) |
-| **SOA (Service-Oriented)** | Servisler ESB (Enterprise Service Bus) ile haberleşir | Entegrasyon kolay<br>Servis paylaşımı mümkündür | ESB yapısı karmaşık | Kurumsal entegrasyon sistemleri |
-| **Event-Driven** | Bileşenler event (olay) üzerinden iletişim kurar | Asenkron yapı<br>Yüksek performans | Debug ve event takibi zor | Gerçek zamanlı sistemler (IoT, finans) |
-| **MVC (Model–View–Controller)** | Model, View ve Controller ayrımı | Kod düzenli<br>Test edilebilir | Küçük projelerde fazla soyutlama | Web framework’leri (Django, ASP.NET) |
-| **MVVM (Model–View–ViewModel)** | ViewModel veri bağlama sağlar | UI bağımsızlığı<br>Data binding avantajı | Öğrenmesi zor | Mobil / Masaüstü UI (React, Flutter, WPF) |
-| **Hexagonal (Ports & Adapters)** | Uygulama çekirdeği dış dünyadan soyutlanır | Bağımlılıklar azalır<br>Test edilebilirlik artar | Soyutlama karmaşık olabilir | Büyük domain bazlı projeler |
-| **Clean Architecture** | Katmanlar bağımlılık yönüne göre düzenlenir | Yüksek bağımsızlık<br>Kolay test edilebilir | Tasarımı zaman alır | Orta–büyük ölçekli projeler |
+## 🧱 Yazılım Mimarileri Özeti
+
+| Mimari Türü | Kısa Açıklama |
+|--------------|----------------|
+| **Peer-to-Peer (P2P) Architecture** | Her düğüm (node) hem istemci hem sunucu gibi davranır. Merkezî sunucu yoktur; veri doğrudan cihazlar arasında paylaşılır. Örnek: Torrent, blockchain. |
+| **Broker Architecture** | İstemci ve sunucular arasındaki iletişimi bir “broker” (aracı) yönetir. Servislerin keşfi, mesaj yönlendirme ve iletişim soyutlanır. Örnek: CORBA, RabbitMQ. |
+| **Pipe and Filter Architecture** | Veriler, sıralı filtrelerden (filter) geçerek dönüştürülür. Filtreler arasında veri akışı “pipe” (boru) yapısıyla sağlanır. Örnek: Unix komut zincirleri, veri işleme sistemleri. |
+| **Master–Slave Architecture** | “Master” görevleri alt birimlere (slave) dağıtır, sonuçları toplar. Paralel işlem gerektiren yapılarda kullanılır. Örnek: Veritabanı replikasyonu, dağıtık hesaplama. |
+| **Client–Server Architecture** | İstemci (client) istekte bulunur, sunucu (server) yanıt verir. Merkezi bir yapıdadır. Örnek: Web uygulamaları, oyun sunucuları. |
+| **Microservice Architecture** | Uygulama, birbirinden bağımsız küçük servislerden oluşur. Her servis kendi veritabanı ve mantığına sahiptir. Örnek: Netflix, Amazon. |
+| **Microkernel Architecture** | Çekirdek (core system) temel işlevleri barındırır; isteğe bağlı eklentiler (plugins) ile sistem genişletilir. Örnek: IDE’ler, işletim sistemleri. |
+| **Event-Driven Architecture** | Bileşenler olaylar (event) üzerinden iletişim kurar. Asenkron, yüksek performanslı yapılara uygundur. Örnek: IoT, gerçek zamanlı sistemler. |
+| **Layered (N-Tier) Architecture** | Uygulama katmanlara ayrılır (UI, Business, Data). Katmanlar arası bağımlılıklar düzenlidir. Örnek: Kurumsal web sistemleri. |
+
   
