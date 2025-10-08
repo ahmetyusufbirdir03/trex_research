@@ -936,7 +936,7 @@ Temiz kod, bir kodun çalışması dışında okunabilir ve geliştirilebilir ol
 
 ## 🧱 Yazılım Mimarileri Özeti
 
-| Mimari Türü | Kısa Açıklama |
+| Mimari Türü | Açıklama |
 |--------------|----------------|
 | **Peer-to-Peer (P2P) Architecture** | Her düğüm (node) hem istemci hem sunucu gibi davranır. Merkezî sunucu yoktur; veri doğrudan cihazlar arasında paylaşılır. Örnek: Torrent, blockchain. |
 | **Broker Architecture** | İstemci ve sunucular arasındaki iletişimi bir “broker” (aracı) yönetir. Servislerin keşfi, mesaj yönlendirme ve iletişim soyutlanır. Örnek: CORBA, RabbitMQ. |
