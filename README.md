@@ -902,4 +902,5 @@ Arayüz Ayrım prensibi, bir sınıfın yapması gereken her davranış için on
 * Örnek:
   > A ve B marka yazıcıları olsun. Bu yazıcılar Y(yazıcı) arayüzüne bağlı olsun. A yazıcısı renkli baskı yapabiliyor olsun ve B yazıcısı yapamıyor olsun. Bu durumda Y arayüzünde renkli baskı ile ilgili bir davranış olursa B yazıcısının kullanımı sırasında renkli baskı yapılabileceği görülür ancak bu hataya sebep olur.
 ### Dependency Inversion ### 
-Bu konuyu ilgili bağlantıdan okuyabilirsiniz: **[Bağımlılık Enjeksiyonu (Dependency Injection) Nedir?](#bağımlılık-enjeksiyonu-dependency-injection-nedir)**.
+Daha fazla bilgi için [Bağımlılık Enjeksiyonu(Dependency Injection) Nedir?](#bağımlılık-enjeksiyonudependency-injection-nedir) kısmına göz atabilirsiniz.
+
