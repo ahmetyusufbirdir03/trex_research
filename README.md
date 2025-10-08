@@ -340,6 +340,8 @@ Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu de
   * data genellikle bir nesne (object) ya da bazen dizi (array) olur.
   * Burada API bize oluşturulan kullanıcı nesnesini döndürüyor.
 
+
+
 # 4- ASP.NET
 ### ASP.NET Nedir? ###
  * ASP.NET, Microsoft tarafından geliştirilmiş bir web uygulama geliştirme framework’üdür.
@@ -599,7 +601,9 @@ Clean Architecture, bağımlılıkların ve sorumlulukların kontrol altında tu
 | Test Edilebilirlik | Orta                                                        | Yüksek                                                          |
 | Esneklik           | Orta                                                        | Yüksek (teknoloji bağımsız)                                     |
 
-# Veritabanı ve ORM #
+
+
+# 5- Veritabanı ve ORM #
 
 ## SQL Nedir? ##
 SQL (Structured Query Language), veritabanlarıyla iletişim kurmak için kullanılan bir sorgulama dilidir. Veri tabanı üzerinde okuma, yazma, silme, ekleme ve diğer tablo işlemleri yapılmasını sağlar. Kısaca veri ne yapılması gerektiğini anlatır.
@@ -684,7 +688,7 @@ Veritabanı mevcuttur ve ORM veritabanındaki şemaya göre koddaki sınıfları
 | **UPDATE** | Kayıt günceller  | `UPDATE Students SET Age = 23 WHERE Name = 'Ahmet';`     |
 | **DELETE** | Kayıt siler      | `DELETE FROM Students WHERE Name = 'Ahmet';`             |
 
-# Güvenlik ve Performans #
+# 6- Güvenlik ve Performans #
 ## Authentication Nedir? ##
 Sisteme giriş yapmaya çalışan kullanıcının kim olduğunu doğrulayan sisteme denir.Kullanıcı bir sisteme erişmeye çalıştığında, sistem kullanıcının kimliğini doğrulamak için kullanıcıdan bazı bilgiler ister. Örneğin banka hesabına giriş yaparken kullanıcı adı ve şifresisin doğrulanmasıdır.
 ## Authorization Nedir? ##
@@ -785,7 +789,7 @@ Uygulamanın ve altyapının üretim ortamındaki performansını sürekli izlen
 | **A10:2021 - Sunucu Taraflı İstek Sahteciliği (Server-Side Request Forgery - SSRF)** | Bir saldırganın, zafiyetli sunucuyu kullanarak sunucunun erişebildiği herhangi bir dahili veya harici başka bir adrese istek göndermeye zorlamasıdır. |
 
 
-# Logging ve Hata Yönetimi #
+# 7- Logging ve Hata Yönetimi #
 ## Logging Nedir? Neden Yapılır? ##
 Loglama (Logging), uygulamanın çalışması sırasında gerçekleşen olayları kayıt altına alma işlemidir. Amaç, hataları, performans sorunlarını, kullanıcı davranışlarını veya sistem olaylarını izleyebilmek ve gerektiğinde geriye dönük analiz yapmaktır.<br><br>
 Neden Loglama Yapılır?
@@ -871,4 +875,15 @@ public class ExceptionMiddleware : IMiddleware
 }
 ```
 
+# 8- Yazılım Geliştirme Prensipleri #
+## SOLID Prensipleri ##
+* S -> Single Responsibility Principle (Tek Sorumluluk Prensibi)
+* O -> Open/Closed Principle (Açık/Kapalı Prensibi)
+* L -> Liskov Substitution Principle (Liskov Yerine Geçme Prensibi)
+* I -> Interface Segregation Principle (Arayüz Ayrım Prensibi)
+* D -> Dependency Inversion Principle (Bağımlılığın Tersine Çevrilmesi Prensibi)
 
+### Single Responsibility Principle ###
+Tek sorumluluk prensibi, nesne tabanlı programlamada bir sınıfın veya metodun olağan ihtinmal ile bir sorumluluğa odaklı yapılmasını ister. Bir sınıfın veya metodun değişmesi için tek bir nedeni olmasını ve herbirinin bu ilkeye göre inşa edilmesini savunan bir prensiptir.<br>
+* Örnek;
+> Aritmetik işlemlerin her birinin ayrı fonksiyonlarda olması ve hepsinin Matematik sınıfı altında olması.
