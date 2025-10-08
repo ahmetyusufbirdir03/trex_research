@@ -887,3 +887,9 @@ public class ExceptionMiddleware : IMiddleware
 Tek sorumluluk prensibi, nesne tabanlı programlamada bir sınıfın veya metodun olağan ihtinmal ile bir sorumluluğa odaklı yapılmasını ister. Bir sınıfın veya metodun değişmesi için tek bir nedeni olmasını ve herbirinin bu ilkeye göre inşa edilmesini savunan bir prensiptir.<br>
 * Örnek;
 > Aritmetik işlemlerin her birinin ayrı fonksiyonlarda olması ve hepsinin Matematik sınıfı altında olması.
+### Open/Closed Principle ###
+Açık/Kapalı prensibi, bir sınıfın ihtiyaçlar dahilinde değiştirilmeden genişletilebilir olmasını savunan bir prensiptir.
+* Değiştirme : Var olan kod ihtiyaç dahilinde değiştirilmesi
+* Genişletilebilir : Var olan kod ihtiyaç dahilinde gelen davranışı değiştirilmeden uygulayabilecek olması.
+* Örnek:
+  > Bir para transferi uygulamasında A,B ve C bankalarıyla çalışılsın. Bu bankaların her birinin aynı işleri yapan farklı düzenlenmiş sınıfları olsun. A bankası ile çalışılırken onun sahip olduğu düzen kullanılır. Ancak A bankasını bırakıp B bankası ile çalışılmaya başlandığında tüm kod değişmek zorunda kalır. Bunun yerine A,B,C veya herhangi bir banka ortak bir atadan türetilip düzenlenir ise her br banka aynı yapıyı kullanacağından değişen tek şey isimler olacaktır. Bu sayede ana kodda büyük değişimler olmayacaktır.
