@@ -369,13 +369,13 @@ Bu bir JSON nesnesidir ve içerisinde anahtar-değer çiftleri bulundurur. Bu de
 ## MVC Nedir? ##
 MVC, yazılım geliştirmede kullanılan bir mimari tasarım desenidir. Uygulamanın farklı sorumluluklarını üç ana bileşene ayırarak kod organizasyonunu ve bakımını kolaylaştırır.
 ### 1- Model (M) ###
-Ne işe yarar? Uygulamanın veri ve iş mantığını yönetir.
+Uygulamanın veri ve iş mantığını yönetir.
 
 ### View (V) ###
-Ne işe yarar? Kullanıcıya gösterilen arayüzü oluşturur.
+Kullanıcıya gösterilen arayüzü oluşturur.
 
 ### Controller (C) ###
-Ne işe yarar? Model ve View arasında köprü görevi görür.
+Model ve View arasında köprü görevi görür.
 
 ```yaml
           Kullanıcı (Tarayıcı)
