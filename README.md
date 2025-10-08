@@ -470,7 +470,7 @@ Middlware, bir programda istek(request) ve cevap(response) arasında yapılan ko
  HTTP Response (Kullanıcıya dönen cevap)
 
 ```
-## Bağımlılık Enjeksiyonu(Dependency Injection) Nedir?
+## Bağımlılık Enjeksiyonu(Dependency Injection) Nedir? ##
 Bağımlılık iki parçanın birbirine doğrudan bağlanmasıyla ve bu bağlanmanın sonucunda bir parçadaki değişimin diğer parçayı etkilemesiyle oluşur. Bağımlılık enjeksiyonu, birbiriyle bağımlılık oluşturan parçaların birbirinden ayrılarak dolaylı yollardan birbirleriyle haberleştirilmesidir. Örnek olarak;
    * Birbirinden farklı 3 sınıf A,B,C olsun. İlk durumda A sınıfında herhangi bir noktada B sınıfının bir nesnesi çağırılırsa bu durumda A sınıfı B sınıfına bağımlı olur. Bunun sebebi şudur: eğer A sınıfının ihtiyacının B yerine C olması halinde kaynak kodda değişim yapılması gerekir.
    * Ancak A sınıfı doğrudan B veya C sınıflarını kullanmak yerine B ve C sınıflarının çağıracak farklı bir çağırıcı kullanır ise, B veya C sınıflarından birine ihtiyacı değişirse veya B ve C sınıflarının yapıları değişirse, Asınıfında değişiklik yapılmak durumunda kalınmayacağından bağımlılık azaltılmış, enjekte edilmiş olur.
@@ -893,3 +893,13 @@ Açık/Kapalı prensibi, bir sınıfın ihtiyaçlar dahilinde değiştirilmeden 
 * Genişletilebilir : Var olan kod ihtiyaç dahilinde gelen davranışı değiştirilmeden uygulayabilecek olması.
 * Örnek:
   > Bir para transferi uygulamasında A,B ve C bankalarıyla çalışılsın. Bu bankaların her birinin aynı işleri yapan farklı düzenlenmiş sınıfları olsun. A bankası ile çalışılırken onun sahip olduğu düzen kullanılır. Ancak A bankasını bırakıp B bankası ile çalışılmaya başlandığında tüm kod değişmek zorunda kalır. Bunun yerine A,B,C veya herhangi bir banka ortak bir atadan türetilip düzenlenir ise her br banka aynı yapıyı kullanacağından değişen tek şey isimler olacaktır. Bu sayede ana kodda büyük değişimler olmayacaktır.
+### Liskov Substitution Principle ###
+Liskov Yerine Geçme prensbi, ortak atadan türeyen sınıfların sorunsuz bir şekilde birbirlerinin yerine kullanılabilmesini savunur.
+* Örnek:
+  > B ve C, A atasından türemiş 2 sınıf olsunlar. A ata sınıfında x ve y fonksiyonları olsun. Bu durumda B ve C sınıflarında da bu x ve y fonksiyonları olacaktır. B sınıfı x ve y fonksiyonlarını tam kullanıyor olsun. Bu durumda C sınıfı eğer x veya y fonksiyonlarından birini kullanmıyorsa, yani x veya y fonksiyonlarından biri C sınıfı için gereksiz ve boş ise bu durumda kullanıcı B sınıfı yerine C sınıfını kullanmaya kalkarsa hata ile karşılaşır.
+### Interface Segregation Principle ###
+Arayüz Ayrım prensibi, bir sınıfın yapması gereken her davranış için ona uygun arayüzlerle eşleşmesi gerektiğini savunur. Bu ilkeye göre bir sınıf yapması gerekmeyen veya yapamadığı bir metodu vya davranışı kendisine eklemek zorunda kalmaz.
+* Örnek:
+  > A ve B marka yazıcıları olsun. Bu yazıcılar Y(yazıcı) arayüzüne bağlı olsun. A yazıcısı renkli baskı yapabiliyor olsun ve B yazıcısı yapamıyor olsun. Bu durumda Y arayüzünde renkli baskı ile ilgili bir davranış olursa B yazıcısının kullanımı sırasında renkli baskı yapılabileceği görülür ancak bu hataya sebep olur.
+### Dependency Inversion ### 
+Bu konuyu ilgili bağlantıdan okuyabilirsiniz: **[Bağımlılık Enjeksiyonu (Dependency Injection) Nedir?](#bağımlılık-enjeksiyonu-dependency-injection-nedir)**.
