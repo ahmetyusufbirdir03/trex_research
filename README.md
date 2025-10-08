@@ -904,3 +904,30 @@ Arayüz Ayrım prensibi, bir sınıfın yapması gereken her davranış için on
 ### Dependency Inversion ### 
 Bu kısmda ilgili bağlantıdan ulaşabilirsiniz: [Bağımlılık Enjeksiyonu(Dependency Injection) Nedir?](#bağımlılık-enjeksiyonudependency-injection-nedir) .
 
+## Design Patterns ##
+### Creational Design Patterns ###
+1. Singleton Pattern <br>
+Bir projede, bir sınıfın yanlızca bir örneği olamsı gerektiğin ve bu örneğin global erişimde olmasını söyler.
+   * Örnek : Logger sistemleri
+2. Factory Method Pattern <br>
+Nesne oluşturma işlemini bir “fabrika” metoduna bırakır. Üst sınıf genel bir arayüz sunar, alt sınıflar hangi nesneyi oluşturacaklarına kendileri karar verir.
+   * Örnek : Oyunlarda farklı karakter/araç tiplerinin oluşturulması
+3. Prototype Pattern <br>
+Bir sınıftan yeni bir nesne üretmek yerine var olan bir nesneyi kopyalayarak yapılan işlemdir.
+
+## Clean Code Nedir? ##
+Temiz kod, bir kodun çalışması dışında okunabilir ve geliştirilebilir olmasını önemseyen bir yaklaşımdır. Başkaları tarafından kolayca anlaşılabilmesini, bakımının kolay olmasını ve hataların az olmasını sağlar. Örnek olarak bir fonksiyonun kısa ve tek sorumluluğa sahip olması, kod içinde anlamlı isimlendirmeler, tekrar eden kodların azaltımı gibi özelliklerdir.
+* Örnek:
+  > ❌ Kötü örnek:
+  ```bash
+  def process_user(data):
+    validate(data)
+    save_to_db(data)
+    send_email(data)
+  ```
+  > ✅ İyi örnek:
+  ```bash
+  def validate_user(data): ...
+  def save_user(data): ...
+  def notify_user(data): ...
+  ```
